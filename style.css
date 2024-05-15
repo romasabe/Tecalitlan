@@ -1,0 +1,13 @@
+.navTitles{
+    font-size: 30px;
+}
+.ubuntu-sans {
+    font-family: "Ubuntu Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+.currentPage{
+    font-weight: 600;
+}
