@@ -222,6 +222,31 @@ const menu = [
             group: "Tortas",
             menuItem: "Torta",
         },
+        torta_combo = {
+            price: 10.00,
+            menuIndex: 11,
+            group: "Tortas",
+            menuItem: "Torta Combo",
+        },
+        torta_dinner = {
+            price: 13.00,
+            menuIndex: 12,
+            group: "Tortas",
+            menuItem: "Torta Dinner",
+        },
+        torta_combo_dinner = {
+            price: 14.00,
+            menuIndex: 13,
+            group: "Tortas",
+            menuItem: "Torta Combo Dinner",
+        },
+        quesabirria = {
+            price: 12.00,
+            menuIndex: 14,
+            group: "Tortas",
+            menuItem: "Quesabirria",
+        },
+        
     ],
 //Sides Menu
     sides = [
