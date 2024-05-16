@@ -217,8 +217,11 @@ const menu = [
             menuItem: "El Jefe Burrito",
         },
         torta = {
-            price: 9.50, 
-        }
+            price: 9.50,
+            menuIndex: 10,
+            group: "Tortas",
+            menuItem: "Torta",
+        },
     ],
 //Sides Menu
     sides = [
