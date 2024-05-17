@@ -11,3 +11,20 @@
 .currentPage{
     font-weight: 600;
 }
+.bg-img {
+    background-image: url(photos/tortilla_image.avif);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+  .bg-img>p {
+    color: black;
+  }
+  .footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
