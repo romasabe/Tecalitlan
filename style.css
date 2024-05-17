@@ -18,7 +18,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    size: 500px, 500px;
+    height: auto;
   }
   
   .bg-img>p {
