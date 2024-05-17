@@ -2,7 +2,11 @@
 var ordered = [null]
 var totalPrice
 //Main Code
-
+function appetizersMenu(){
+    let newItem = document.createElement("div");
+    newItem.id = "menu1"
+    newItem.classList.add("")
+}
 /* Called when a button on the menu screen is clicked,
     Takes the name of the item being ordered or cancelled, 
     its section, and if the button is calling for a decline
