@@ -19,6 +19,7 @@
     align-items: flex-end;
     justify-content: center;
     height: 500px;
+    width: 100%;
     color: black
   }
   .footer{
