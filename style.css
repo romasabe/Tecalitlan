@@ -18,7 +18,9 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    height: 350px;
-    width: 1000px;
-    color: black
+    height: 250px;
+    color: black;
+  }
+  .bg-nav{
+    background-color: black;
   }
