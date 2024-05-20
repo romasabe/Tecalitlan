@@ -245,7 +245,21 @@ const menu = [
             group: "Tortas",
             menuItem: "Quesabirria",
         },
-        
+        steak_fajitas = {
+            price: 26.00,
+            menuIndex: 15,
+            group: "Fajitas",
+            menuItem: "Steak Fajitas"
+        },
+        veggie_fajitas = {
+            price: 19.00,
+            menuIndex: 16,
+            group: "Fajtas",
+            menuItem: "Veggie Fajitas",
+        },
+        chicken_fajitas = {
+            price: 22.00
+        },
     ],
 //Sides Menu
     sides = [

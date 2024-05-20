@@ -23,4 +23,10 @@
   }
   .bg-nav{
     background-color: black;
+    color: white;
+  }
+  .bg-foot{
+    padding: 5px;
+    background-color: black;
+    color: white;
   }
