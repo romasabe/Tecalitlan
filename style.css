@@ -25,6 +25,9 @@
     background-color: black;
     color: white;
   }
+  .whiteText{
+    color:white;
+  }
   .bg-foot{
     padding: 5px;
     background-color: black;
