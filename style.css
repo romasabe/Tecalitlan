@@ -11,7 +11,7 @@
 .currentPage{
     font-weight: 600;
 }
-.bg-img {
+.jumbotron1{
     background-image: url(photos/tortilla_image.avif);
     background-size: cover;
     background-position: center;
@@ -19,14 +19,22 @@
     align-items: flex-end;
     justify-content: center;
     height: 250px;
-    color: black;
+    color:white;
+  }
+  .jumbotron1Text{
+    color: white;
+    position: relative;
+    bottom: 75px;
   }
   .bg-nav{
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
   }
   .whiteText{
     color:white;
+  }
+  .blackText{
+    color:black
   }
   .bg-foot{
     padding: 5px;
