@@ -267,13 +267,13 @@ const menu = [
             price: 25.00,
             menuIndex: 18,
             group: "Fajitas",
-            menuItem: ""
+            menuItem: "Steak and Chicken Fajitas",
         },
         shrimp_and_veggie_fajitas = {
             price: 25.00,
             menuIndex: 19,
             group: "Fajitas",
-            menuItem: "Shrimp and Veggie Fajitas"
+            menuItem: "Shrimp and Veggie Fajitas",
         },
     ],
 //Sides Menu

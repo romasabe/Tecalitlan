@@ -26,6 +26,10 @@
   position: relative;
   bottom: 75px;
 }
+.jumbotron1TextBg{
+  color: black;
+  opacity: 0.5;
+}
 .whiteText{
   color:whitesmoke;
 }
