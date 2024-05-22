@@ -18,19 +18,20 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  height: 250px;
+  height: 275px;
   color: whitesmoke;
 }
 .jumbotron1Text{
   color: whitesmoke;
-  position: relative;
-  bottom: 75px;
+  opacity: 1;
 }
 .jumbotron1TextBg{
   background-color: black;
   color: black;
   opacity: 0.5;
   padding: 5px;
+  position: relative;
+  bottom: 75px;
 }
 .whiteText{
   color:whitesmoke;
@@ -42,4 +43,9 @@
   padding: 5px;
   background-color: black;
   color: whitesmoke;
+}
+.tecaheader{
+  color: 5F5B6B}
+.tecastory{
+  color: rB5BAD0
 }
