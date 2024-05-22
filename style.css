@@ -1,43 +1,39 @@
 .navTitles{
-    font-size: 30px;
+  font-size: 30px;
 }
 .ubuntu-sans {
-    font-family: "Ubuntu Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    font-variation-settings:"wdth" 100;
+  font-family: "Ubuntu Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
 }
 .currentPage{
-    font-weight: 600;
+  font-weight: 600;
 }
 .jumbotron1{
-    background-image: url(photos/tortilla_image.avif);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    height: 250px;
-    color:white;
-  }
-  .jumbotron1Text{
-    color: white;
-    position: relative;
-    bottom: 75px;
-  }
-  .bg-nav{
-    background-color: white;
-    color: black;
-  }
-  .whiteText{
-    color:white;
-  }
-  .blackText{
-    color:black
-  }
-  .bg-foot{
-    padding: 5px;
-    background-color: black;
-    color: white;
-  }
+  background-image: url(photos/tortilla_image.avif);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 250px;
+  color: whitesmoke;
+}
+.jumbotron1Text{
+  color: whitesmoke;
+  position: relative;
+  bottom: 75px;
+}
+.whiteText{
+  color:whitesmoke;
+}
+.blackText{
+  color: black;
+}
+.bg-foot{
+  padding: 5px;
+  background-color: black;
+  color: whitesmoke;
+}
