@@ -27,8 +27,10 @@
   bottom: 75px;
 }
 .jumbotron1TextBg{
+  background-color: black;
   color: black;
   opacity: 0.5;
+  padding: 5px;
 }
 .whiteText{
   color:whitesmoke;
