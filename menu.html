@@ -34,51 +34,15 @@
     </div>
   </nav>
   <!-- Menu Display-->
+  <button class="appetizers btn btn-primary" onclick="display(this.classList.item(0))">Appetizers</button>
+  <button class ="soupsSalads btn btn-primary" onclick="display(this.classList.item(0))">Soups and Salads</button>
+  <p>Stuff will appear under this.</p>
   <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-
+      <div class ="row">
+        <div class="col-12" id="menu">
+          
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <p>hi adrian ojedahowhdow</p>
-      <div class="col-2">
-        <button class="appetizers ubuntu-sans" onclick="display(this)">
-          Appetizers
-        </button>
-      </div>
-      <div class="col-2">
-        <button class="soupsSalads ubuntu-sans" onclick="display(this.classList.item(0))">
-          Soups and Salads
-        </button>
-      </div>
-      <div class="col-2">
-        <button class="breakfast ubuntu-sans" onclick="display(this.classList.item(0))">
-          Breakfast
-        </button>
-      </div>
-      <div class="col-2">
-        <button class="tortillas ubuntu-sans" onclick="display(this.classList.item(0))">
-          Tacos, Burritos, Fajitas, and Tortas
-        </button>
-      </div>
-      <div class="col-2">
-        <button class="sides ubuntu-sans" onclick="display(this.classList.item(0))">
-          Sides
-        </button>
-      </div>
-      <div class="col-2">
-        <button class="desserts ubuntu-sans" onclick="display(this.classList.item(0))">
-          Desserts
-        </button>
-      </div>
-    </div>
-    <div class="row">
-      <div id = "menu">
-
-      </div>
-    </div>
-  </div>
   </div>
   <!-- Footer -->
   <footer class="container-fluid bg-foot">

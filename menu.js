@@ -56,71 +56,57 @@ function deOrder(section) {
         // alert(totalPrice);
     }
 }
-function display(sectClass) {
-    alert("working")
+function display(sectClass){
     let newElements = document.getElementsByClassName("newElement");
     removeElements(newElements);
     // Runs through the entire menu to find the section within the menu
     for (var x = 0; x < menu.length; x++) {
         let sectName = menu[x][0];
-        if (sectName == sectClass) {
+        if (sectName == sectClass){
             let sect = menu[x];
-            for (var p = 1; p < sect.length; p++) {
+            for (var p = 1; p < sect.length; p++){
                 createCard(sectName, sect[p]);
             }
             break;
         }
     }
 }
-function removeElements(newElements) {
-    for (var q = 0; q < newElements.length; q++) {
-        let selectedItem = newElements.item(q);
-        selectedItem.remove();
-    }
+function removeElements(newElements){
+for (var q = 0; q < newElements.length; q++){
+    let selectedItem = newElements.item(q);
+    selectedItem.remove();
 }
-function createCard(menuStuff, section) {
-    // Creates card div
-    let menuCreate = document.getElementById("menu");
-    let newCard = document.createElement("div");
-    newCard.classList.add("card", "cardStyle", "newElement");
-    menuCreate.appendChild(newCard);
-    // card content
-    let newContent = document.createElement("div");
-    newContent.classList.add("card-body", "newElement");
-    newCard.appendChild(newContent);
-    // card title
-    let newTitle = document.createElement("h5");
-    newTitle.classList.add("card-title", "newElement");
-    // title text
-    let newText = document.createTextNode(String(section.menuItem));
-    newTitle.appendChild(newText);
-    // price text
-    let newPrice = document.createElement("h6");
-    let priceText = document.createTextNode("Price: $" + String(section.price) + ".00");
-    newPrice.classList.add("newElement");
-    newPrice.appendChild(priceText);
-    // order button
-    let orderButton = document.createElement("button");
-    if (menuStuff == "tortillas") {
-        let tortillaBool = true;
-    } else {
-        let tortillaBool = false;
-    }
-    newButton.classList.add(menuStuff, "btn", "btn-primary", "newElement");
-    newButton.id = String(section.menuItem);
-    let eventNew = newButton.classList.item(0);
-    newButton.onclick = function () { select(this.id, eventNew, 0, tortillaBool); };
-    let buttonText = document.createTextNode("Add");
-    newButton.appendChild(buttonText);
-    // adding everything together
-    let undoButton = document.createElement("button");
-    newButton.classList.add(menuStuff, "btn", "btn-primary", "newElement");
-    newButton.id = String(section.menuItem);
-    let eventNew = newButton.classList.item(0);
-    newButton.onclick = function () { select(this.id, eventNew, 1, tortillaBool); };
-    buttonText = document.createTextNode("Remove");
-    newButton.appendChild(buttonText);
-    newContent.append(newTitle, newPrice, orderButton, undoButton);
+}
+function createCard(menuStuff, section){
+// Creates card div
+let newCard = document.createElement("div");
+newCard.classList.add("card","cardStyle","newElement");
+menuCreate.appendChild(newCard);
+// card content
+let newContent = document.createElement("div");
+newContent.classList.add("card-body", "newElement");
+newCard.appendChild(newContent);
+// card title
+let newTitle = document.createElement("h5");
+newTitle.classList.add("card-title","newElement");
+// title text
+let newText = document.createTextNode(String(section.menuItem));
+newTitle.appendChild(newText);
+// price text
+let newPrice = document.createElement("h6");
+let priceText = document.createTextNode("Price: $" + String(section.price) + ".00");
+newPrice.classList.add("newElement");
+newPrice.appendChild(priceText);
+// order button
+let newButton = document.createElement("button");
+newButton.classList.add(menuStuff, "btn", "btn-primary", "newElement");
+newButton.id = String(section.menuItem);
+let eventNew = newButton.classList.item(0);
+newButton.onclick = function() { doesWork(this.id, eventNew); };
+let buttonText = document.createTextNode("Add");
+newButton.appendChild(buttonText);
+// adding everything together
+newContent.append(newTitle, newPrice, newButton);
 }
 //menu (move later)
 const menu = [
