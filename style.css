@@ -22,7 +22,7 @@
   color: whitesmoke;
 }
 .jumbotron1TextBg{
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);
   color: black;
   opacity: 0.5;
   position: relative;
@@ -32,7 +32,7 @@
 }
 .jumbotron1Text{
   color: whitesmoke;
-  opacity: 2;
+  opacity: 1;
 }
 .whiteText{
   color:whitesmoke;
