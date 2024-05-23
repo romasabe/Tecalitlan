@@ -21,17 +21,18 @@
   height: 275px;
   color: whitesmoke;
 }
-.jumbotron1Text{
-  color: whitesmoke;
-  opacity: 1;
-}
 .jumbotron1TextBg{
   background-color: black;
   color: black;
   opacity: 0.5;
-  padding: 5px;
   position: relative;
   bottom: 75px;
+  border-radius: 25px;
+}
+.jumbotron1Text{
+  color: whitesmoke;
+  opacity: 1;
+  font-size: large;
 }
 .whiteText{
   color:whitesmoke;
@@ -47,5 +48,8 @@
 .tecaheader{
   color: 5F5B6B}
 .tecastory{
-  color: rB5BAD0
+  color: B5BAD0
+}
+.tecaname{
+  color: 011627
 }

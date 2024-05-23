@@ -33,6 +33,9 @@ function select(itemName, itemClass, decline, tortillaBool) {
 
 // adds an item to the order
 function order(section, tortillaBool) {
+    if(tortillaBool == true){
+        
+    }
     totalPrice += section.price;
     ordered.push(section.menuItem)
     // alert(totalPrice);
