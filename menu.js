@@ -1,28 +1,30 @@
 // Variables
-var ordered = [null]
-var totalPrice
-
+var ordered = [null];
+var totalPrice = 0;
+var menuCreate = document.getElementById("menu");
+var dispPrice = document.getElementById("price");
+var sectionDiv;
 //Main Code
 /* Called when a button on the menu screen is clicked,
     Takes the name of the item being ordered or cancelled, 
     its section, and if the button is calling for a decline
     in items or a increase in items.
 */
-function select(itemName, itemClass, decline, tortillaBool) {
+function select(itemName, itemClass, decline) {
     // Runs through the entire menu to find the section within the menu
     for (var x = 0; x < menu.length; x++) {
-        if (menu[x[0]] == itemClass) {
+        if (menu[x][0] == itemClass) {
             let sect = menu[x];
             // Runs through the entire section of the menu that is selected
             for (var z = 0; z < sect.length; z++) {
-                if (sect[z].name == itemName) {
+                if (sect[z].menuItem == itemName) {
                     if (decline == 1) {
                         // Removes an item
                         deOrder(sect[z]);
                         break;
                     } else {
                         // adds an item
-                        order(sect[z], tortillaBool);
+                        order(sect[z]);
                         break;
                     }
                 }
@@ -33,19 +35,16 @@ function select(itemName, itemClass, decline, tortillaBool) {
 }
 
 // adds an item to the order
-function order(section, tortillaBool) {
-    if(tortillaBool == true){
-
-    }
+function order(section) {
     totalPrice += section.price;
     ordered.push(section.menuItem)
-    // alert(totalPrice);
+    alert(totalPrice);
 }
 
 // remove an item from the order
 function deOrder(section) {
     let includeBool = ordered.includes(section.menuItem)
-    if (includeBool = true) {
+    if (includeBool == true) {
         totalPrice -= section.price;
         for (var y = 0; y < ordered.length; y++) {
             if (ordered[y] == section.menuItem) {
@@ -53,17 +52,19 @@ function deOrder(section) {
                 break;
             }
         }
-        // alert(totalPrice);
+        alert(totalPrice);
     }
 }
 function display(sectClass){
-    let newElements = document.getElementsByClassName("newElement");
-    removeElements(newElements);
+    removeElements()
     // Runs through the entire menu to find the section within the menu
     for (var x = 0; x < menu.length; x++) {
         let sectName = menu[x][0];
         if (sectName == sectClass){
             let sect = menu[x];
+            sectionDiv = document.createElement("div")
+            sectionDiv.id = "menuDisplay";
+            menuCreate.appendChild(sectionDiv);
             for (var p = 1; p < sect.length; p++){
                 createCard(sectName, sect[p]);
             }
@@ -71,17 +72,19 @@ function display(sectClass){
         }
     }
 }
-function removeElements(newElements){
-for (var q = 0; q < newElements.length; q++){
-    let selectedItem = newElements.item(q);
-    selectedItem.remove();
-}
+function removeElements(){
+    if(sectionDiv != null){
+        sectionDiv.remove()
+    }
 }
 function createCard(menuStuff, section){
 // Creates card div
+let sizingDiv = document.createElement("div");
+sizingDiv.classList.add("col-sm-4")
+sectionDiv.appendChild(sizingDiv)
 let newCard = document.createElement("div");
-newCard.classList.add("card","cardStyle","newElement");
-menuCreate.appendChild(newCard);
+newCard.classList.add("card");
+sizingDiv.appendChild(newCard);
 // card content
 let newContent = document.createElement("div");
 newContent.classList.add("card-body", "newElement");
@@ -94,19 +97,29 @@ let newText = document.createTextNode(String(section.menuItem));
 newTitle.appendChild(newText);
 // price text
 let newPrice = document.createElement("h6");
-let priceText = document.createTextNode("Price: $" + String(section.price) + ".00");
+let USDollar = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+});
+let priceText = document.createTextNode("Price: " + USDollar.format(section.price));
 newPrice.classList.add("newElement");
 newPrice.appendChild(priceText);
 // order button
 let newButton = document.createElement("button");
 newButton.classList.add(menuStuff, "btn", "btn-primary", "newElement");
 newButton.id = String(section.menuItem);
-let eventNew = newButton.classList.item(0);
-newButton.onclick = function() { doesWork(this.id, eventNew); };
+newButton.onclick = function() { select(this.id, this.classList.item(0), 0); };
 let buttonText = document.createTextNode("Add");
 newButton.appendChild(buttonText);
+// remove button
+let removeButton = document.createElement("button");
+removeButton.classList.add(menuStuff, "btn", "btn-primary", "newElement");
+removeButton.id = String(section.menuItem);
+removeButton.onclick = function() { select(this.id, this.classList.item(0), 1); };
+let removeText = document.createTextNode("Remove");
+removeButton.appendChild(removeText);
 // adding everything together
-newContent.append(newTitle, newPrice, newButton);
+newContent.append(newTitle, newPrice, newButton, removeButton);
 }
 //menu (move later)
 const menu = [
@@ -186,7 +199,7 @@ const menu = [
             group: "Breakfast",
             menuItem: "Chilaquiles",
         },
-        breakfest_burrito = {
+        breakfast_burrito = {
             price: 12.00,
             menuIndex: 1,
             group: "Breakfast",
@@ -438,3 +451,4 @@ const menu = [
         },
     ],
 ]
+display("appetizers");

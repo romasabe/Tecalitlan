@@ -34,14 +34,31 @@
     </div>
   </nav>
   <!-- Menu Display-->
-  <button class="appetizers btn btn-primary" onclick="display(this.classList.item(0))">Appetizers</button>
-  <button class ="soupsSalads btn btn-primary" onclick="display(this.classList.item(0))">Soups and Salads</button>
-  <p>Stuff will appear under this.</p>
-  <div class="container">
-      <div class ="row">
-        <div class="col-12" id="menu">
-          
+  <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+                <button class="appetizers btn btn-primary" onclick="display(this.classList.item(0))">Appetizers</button>
+            </div>
+            <div class="col-2">
+                <button class ="soupsSalads btn btn-primary" onclick="display(this.classList.item(0))">Soups and Salads</button>
+            </div>
+            <div class="col-2">
+                <button class ="tortillas btn btn-primary" onclick="display(this.classList.item(0))">Tacos, Tortas, Fajitas, and Burritos</button>
+            </div>
+            <div class="col-2">
+                <button class ="breakfast btn btn-primary" onclick="display(this.classList.item(0))">Breakfast</button>
+            </div>
+            <div class="col-2">
+                <button class ="sides btn btn-primary" onclick="display(this.classList.item(0))">Sides</button>
+            </div>
+            <div class="col-2">
+                <button class ="drinks btn btn-primary" onclick="display(this.classList.item(0))">drinks</button>
+            </div>
         </div>
+  </div>
+  <div class="container">
+      <div class ="row" id="menu">
+        
       </div>
   </div>
   <!-- Footer -->
