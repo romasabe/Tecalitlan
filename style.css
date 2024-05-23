@@ -22,17 +22,16 @@
   color: whitesmoke;
 }
 .jumbotron1TextBg{
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
   color: black;
-  opacity: 0.5;
   position: relative;
   bottom: 75px;
-  border-radius: 25px;
+  padding: 5px;
+  border-radius: 20px;
 }
 .jumbotron1Text{
   color: whitesmoke;
   opacity: 1;
-  font-size: large;
 }
 .whiteText{
   color:whitesmoke;

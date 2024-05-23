@@ -58,7 +58,6 @@ function deOrder(section) {
 }
 function display(sectClass) {
     alert("working")
-    var menuCreate = document.getElementById("menu")
     let newElements = document.getElementsByClassName("newElement");
     removeElements(newElements);
     // Runs through the entire menu to find the section within the menu
@@ -81,6 +80,7 @@ function removeElements(newElements) {
 }
 function createCard(menuStuff, section) {
     // Creates card div
+    let menuCreate = document.getElementById("menu");
     let newCard = document.createElement("div");
     newCard.classList.add("card", "cardStyle", "newElement");
     menuCreate.appendChild(newCard);
