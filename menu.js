@@ -1,6 +1,7 @@
 // Variables
 var ordered = [null]
 var totalPrice
+
 //Main Code
 /* Called when a button on the menu screen is clicked,
     Takes the name of the item being ordered or cancelled, 
@@ -34,7 +35,7 @@ function select(itemName, itemClass, decline, tortillaBool) {
 // adds an item to the order
 function order(section, tortillaBool) {
     if(tortillaBool == true){
-        
+
     }
     totalPrice += section.price;
     ordered.push(section.menuItem)
@@ -56,6 +57,8 @@ function deOrder(section) {
     }
 }
 function display(sectClass) {
+    alert("working")
+    var menuCreate = document.getElementById("menu")
     let newElements = document.getElementsByClassName("newElement");
     removeElements(newElements);
     // Runs through the entire menu to find the section within the menu
