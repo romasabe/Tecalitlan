@@ -7,7 +7,7 @@ var totalPrice
     its section, and if the button is calling for a decline
     in items or a increase in items.
 */
-function select(itemName, itemClass, decline) {
+function select(itemName, itemClass, decline, tortillaBool) {
     // Runs through the entire menu to find the section within the menu
     for (var x = 0; x < menu.length; x++) {
         if (menu[x[0]] == itemClass) {
@@ -21,7 +21,7 @@ function select(itemName, itemClass, decline) {
                         break;
                     } else {
                         // adds an item
-                        order(sect[z]);
+                        order(sect[z], tortillaBool);
                         break;
                     }
                 }
@@ -32,7 +32,7 @@ function select(itemName, itemClass, decline) {
 }
 
 // adds an item to the order
-function order(section) {
+function order(section, tortillaBool) {
     totalPrice += section.price;
     ordered.push(section.menuItem)
     // alert(totalPrice);
@@ -41,75 +41,80 @@ function order(section) {
 // remove an item from the order
 function deOrder(section) {
     let includeBool = ordered.includes(section.menuItem)
-    if (includeBool = true){
+    if (includeBool = true) {
         totalPrice -= section.price;
-        for (var y = 0; y < ordered.length; y++){
-            if (ordered[y] == section.menuItem){
+        for (var y = 0; y < ordered.length; y++) {
+            if (ordered[y] == section.menuItem) {
                 ordered.splice(y, 1);
                 break;
             }
         }
         // alert(totalPrice);
-    }   
+    }
 }
-function display(sectClass){
+function display(sectClass) {
     let newElements = document.getElementsByClassName("newElement");
     removeElements(newElements);
     // Runs through the entire menu to find the section within the menu
     for (var x = 0; x < menu.length; x++) {
         let sectName = menu[x][0];
-        if (sectName == sectClass){
+        if (sectName == sectClass) {
             let sect = menu[x];
-            for (var p = 1; p < sect.length; p++){
+            for (var p = 1; p < sect.length; p++) {
                 createCard(sectName, sect[p]);
             }
             break;
         }
     }
 }
-function removeElements(newElements){
-for (var q = 0; q < newElements.length; q++){
-    let selectedItem = newElements.item(q);
-    selectedItem.remove();
+function removeElements(newElements) {
+    for (var q = 0; q < newElements.length; q++) {
+        let selectedItem = newElements.item(q);
+        selectedItem.remove();
+    }
 }
-}
-function createCard(menuStuff, section){
-// Creates card div
-let newCard = document.createElement("div");
-newCard.classList.add("card","cardStyle","newElement");
-menuCreate.appendChild(newCard);
-// card content
-let newContent = document.createElement("div");
-newContent.classList.add("card-body", "newElement");
-newCard.appendChild(newContent);
-// card title
-let newTitle = document.createElement("h5");
-newTitle.classList.add("card-title","newElement");
-// title text
-let newText = document.createTextNode(String(section.menuItem));
-newTitle.appendChild(newText);
-// price text
-let newPrice = document.createElement("h6");
-let priceText = document.createTextNode("Price: $" + String(section.price) + ".00");
-newPrice.classList.add("newElement");
-newPrice.appendChild(priceText);
-// order button
-let orderButton = document.createElement("button");
-newButton.classList.add(menuStuff, "btn", "btn-primary", "newElement");
-newButton.id = String(section.menuItem);
-let eventNew = newButton.classList.item(0);
-newButton.onclick = function() { order(this.id, eventNew); };
-let buttonText = document.createTextNode("Add");
-newButton.appendChild(buttonText);
-// adding everything together
-let undoButton = document.createElement("button");
-newButton.classList.add(menuStuff, "btn", "btn-primary", "newElement");
-newButton.id = String(section.menuItem);
-let eventNew = newButton.classList.item(0);
-newButton.onclick = function() { deOrder(this.id, eventNew); };
-buttonText = document.createTextNode("Remove");
-newButton.appendChild(buttonText);
-newContent.append(newTitle, newPrice, orderButton, undoButton);
+function createCard(menuStuff, section) {
+    // Creates card div
+    let newCard = document.createElement("div");
+    newCard.classList.add("card", "cardStyle", "newElement");
+    menuCreate.appendChild(newCard);
+    // card content
+    let newContent = document.createElement("div");
+    newContent.classList.add("card-body", "newElement");
+    newCard.appendChild(newContent);
+    // card title
+    let newTitle = document.createElement("h5");
+    newTitle.classList.add("card-title", "newElement");
+    // title text
+    let newText = document.createTextNode(String(section.menuItem));
+    newTitle.appendChild(newText);
+    // price text
+    let newPrice = document.createElement("h6");
+    let priceText = document.createTextNode("Price: $" + String(section.price) + ".00");
+    newPrice.classList.add("newElement");
+    newPrice.appendChild(priceText);
+    // order button
+    let orderButton = document.createElement("button");
+    if (menuStuff == "tortillas") {
+        let tortillaBool = true;
+    } else {
+        let tortillaBool = false;
+    }
+    newButton.classList.add(menuStuff, "btn", "btn-primary", "newElement");
+    newButton.id = String(section.menuItem);
+    let eventNew = newButton.classList.item(0);
+    newButton.onclick = function () { select(this.id, eventNew, 0, tortillaBool); };
+    let buttonText = document.createTextNode("Add");
+    newButton.appendChild(buttonText);
+    // adding everything together
+    let undoButton = document.createElement("button");
+    newButton.classList.add(menuStuff, "btn", "btn-primary", "newElement");
+    newButton.id = String(section.menuItem);
+    let eventNew = newButton.classList.item(0);
+    newButton.onclick = function () { select(this.id, eventNew, 1, tortillaBool); };
+    buttonText = document.createTextNode("Remove");
+    newButton.appendChild(buttonText);
+    newContent.append(newTitle, newPrice, orderButton, undoButton);
 }
 //menu (move later)
 const menu = [
@@ -146,9 +151,9 @@ const menu = [
             menuItem: "Nachos",
         },
     ],
-//Soups and Salads Menu
+    //Soups and Salads Menu
     soups_and_salads = [
-        "soups_and_salads",
+        "soupsSalads",
         caldo_de_pollo = {
             price: 13.00,
             menuIndex: 0,
@@ -180,7 +185,7 @@ const menu = [
             menuItem: "Tecalitlan Salad",
         },
     ],
-//Desayunos(Breakfast) Menu
+    //Desayunos(Breakfast) Menu
     breakfast = [
         "breakfast",
         chilaquiles = {
@@ -214,8 +219,8 @@ const menu = [
             menuItem: "Mollete",
         },
     ],
-//Tacos, Burritos, Tortas, and Fajitas Menu
-    tacos_burritos_tortas_fajitas = [
+    //Tacos, Burritos, Tortas, and Fajitas Menu
+    tortillas = [
         "tortillas",
         three_taco_order = {
             price: 12.75,
@@ -338,7 +343,7 @@ const menu = [
             menuItem: "Shrimp and Veggie Fajitas",
         },
     ],
-//Sides Menu
+    //Sides Menu
     sides = [
         "sides",
         sour_cream = {
@@ -372,7 +377,7 @@ const menu = [
             menuItem: "Shredded Cheese",
         },
     ],
-//Desserts Menu
+    //Desserts Menu
     desserts = [
         "desserts",
         vanilla_flan = {
