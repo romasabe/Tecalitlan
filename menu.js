@@ -3,6 +3,7 @@ var ordered = [null];
 var totalPrice = 0;
 var menuCreate = document.getElementById("menu");
 var dispPrice = document.getElementById("price");
+var dispCount = document.getElementById("count")
 var sectionDiv;
 //Main Code
 /* Called when a button on the menu screen is clicked,
@@ -37,7 +38,8 @@ function select(itemName, itemClass, decline) {
 // adds an item to the order
 function order(section) {
     totalPrice += section.price;
-    ordered.push(section.menuItem)
+    priceCount();
+    ordered.push(section.menuItem);
     alert(totalPrice);
 }
 
@@ -80,7 +82,7 @@ function removeElements(){
 function createCard(menuStuff, section){
 // Creates card div
 let sizingDiv = document.createElement("div");
-sizingDiv.classList.add("col-sm-4")
+sizingDiv.classList.add("col-sm")
 sectionDiv.appendChild(sizingDiv)
 let newCard = document.createElement("div");
 newCard.classList.add("card");
@@ -120,6 +122,21 @@ let removeText = document.createTextNode("Remove");
 removeButton.appendChild(removeText);
 // adding everything together
 newContent.append(newTitle, newPrice, newButton, removeButton);
+}
+
+function active(itemGiven, selectId) {
+    if (selectId != "active"){
+        let removeIds = document.getElementsByClassName("call");
+        for (var f = 0; f < removeIds.length; f++){
+            removeIds.item(f).id = null;
+        }
+        itemGiven.id = "active";
+    }
+}
+// When called updates the total price and count and displays it.
+function priceCount(){
+    dispPrice.innerHTML = totalPrice;
+    dispCount.innerHTML = ordered.length;
 }
 //menu (move later)
 const menu = [
