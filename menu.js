@@ -66,7 +66,6 @@ function display(sectClass){
             let sect = menu[x];
             sectionDiv = document.createElement("div")
             sectionDiv.id = "menuDisplay";
-            sectionDiv.classList.add("col-12")
             menuCreate.appendChild(sectionDiv);
             for (var p = 1; p < sect.length; p++){
                 createCard(sectName, sect[p]);
@@ -83,7 +82,6 @@ function removeElements(){
 function createCard(menuStuff, section){
 // Creates card div
 let sizingDiv = document.createElement("div");
-sizingDiv.classList.add("col-sm-4");
 sectionDiv.appendChild(sizingDiv);
 let newCard = document.createElement("div");
 newCard.classList.add("card", "cardStyle");
