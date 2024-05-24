@@ -66,6 +66,7 @@ function display(sectClass){
             let sect = menu[x];
             sectionDiv = document.createElement("div")
             sectionDiv.id = "menuDisplay";
+            sectionDiv.classList.add("col-12")
             menuCreate.appendChild(sectionDiv);
             for (var p = 1; p < sect.length; p++){
                 createCard(sectName, sect[p]);
