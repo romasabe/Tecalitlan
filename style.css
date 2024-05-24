@@ -25,7 +25,9 @@
   background-color: rgba(0, 0, 0, 0.5);
   position: relative;
   bottom: 75px;
-  padding: 5px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   border-radius: 20px;
 }
 .jumbotron1Text{

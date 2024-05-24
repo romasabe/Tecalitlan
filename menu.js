@@ -82,10 +82,10 @@ function removeElements(){
 function createCard(menuStuff, section){
 // Creates card div
 let sizingDiv = document.createElement("div");
-sizingDiv.classList.add("col-sm")
-sectionDiv.appendChild(sizingDiv)
+sizingDiv.classList.add("col-sm-4");
+sectionDiv.appendChild(sizingDiv);
 let newCard = document.createElement("div");
-newCard.classList.add("card");
+newCard.classList.add("card", "cardStyle");
 sizingDiv.appendChild(newCard);
 // card content
 let newContent = document.createElement("div");
