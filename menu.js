@@ -136,7 +136,6 @@ function active(itemGiven, selectId) {
 }
 // When called updates the total price and count and displays it.
 function priceCount(){
-    dispPrice.innerHTML = totalPrice;
     dispCount.innerHTML = ordered.length;
 }
 //menu (move later)
