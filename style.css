@@ -100,3 +100,6 @@
   height: 300px;
   color: whitesmoke;
 }
+.unbold{
+  font-style: normal;
+}
