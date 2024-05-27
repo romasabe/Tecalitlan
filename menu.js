@@ -1,10 +1,16 @@
 // Variables
-var ordered = [null];
+var ordered = [];
+var prices = [];
 var totalPrice = 0;
 var menuCreate = document.getElementById("menu");
 var dispPrice = document.getElementById("price");
 var dispCount = document.getElementById("count")
 var sectionDiv;
+var USDollar = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+});
+var displayed = false;
 //Main Code
 /* Called when a button on the menu screen is clicked,
     Takes the name of the item being ordered or cancelled, 
@@ -38,23 +44,24 @@ function select(itemName, itemClass, decline) {
 // adds an item to the order
 function order(section) {
     totalPrice += section.price;
-    priceCount();
     ordered.push(section.menuItem);
-    alert(totalPrice);
+    prices.push(section.price);
+    priceCount();
 }
 
 // remove an item from the order
 function deOrder(section) {
-    let includeBool = ordered.includes(section.menuItem)
-    if (includeBool == true) {
+    let includeBool = ordered.includes(String(section.menuItem))
+    if (includeBool === true) {
         totalPrice -= section.price;
         for (var y = 0; y < ordered.length; y++) {
             if (ordered[y] == section.menuItem) {
                 ordered.splice(y, 1);
+                prices.splice(y, 1);
+                priceCount();
                 break;
             }
         }
-        alert(totalPrice);
     }
 }
 function display(sectClass){
@@ -66,7 +73,7 @@ function display(sectClass){
             let sect = menu[x];
             sectionDiv = document.createElement("div")
             sectionDiv.id = "menuDisplay";
-            sectionDiv.classList.add("row", "ubuntu-sans", )
+            sectionDiv.classList.add("row", "ubuntu-sans", );
             menuCreate.appendChild(sectionDiv);
             for (var p = 1; p < sect.length; p++){
                 createCard(sectName, sect[p]);
@@ -100,10 +107,6 @@ let newText = document.createTextNode(String(section.menuItem));
 newTitle.appendChild(newText);
 // price text
 let newPrice = document.createElement("h6");
-let USDollar = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-});
 let priceText = document.createTextNode("Price: " + USDollar.format(section.price));
 newPrice.classList.add("newElement");
 newPrice.appendChild(priceText);
@@ -138,6 +141,59 @@ function active(itemGiven, selectId) {
 function priceCount(){
     dispCount.textContent = ordered.length;
 }
+
+// Begins the display for all items in the cart
+function cartDisplay(){
+    var popOver = document.getElementById("orderedDisplay");
+    var addClass = document.getElementsByClassName("gone");
+    for (var f = 0; f < addClass.length; f++){
+        let selectGone = addClass.item(f);
+        selectGone.classList.remove("visually-hidden");
+    };
+    let encompass = document.createElement("div");
+    encompass.id = "listRemove";
+    popOver.append(encompass);
+    let newList = document.createElement("ul");
+    newList.classList.add("list-group", "list-group-flush");
+    encompass.append(newList);
+    if (ordered.length > 0 && displayed === false){
+        for (var u = 0; u < ordered.length; u++){
+            let selectedListItem = ordered[u];
+            let selectedPrice = prices[u];
+            let listItem = document.createElement("li");
+            listItem.classList.add("list-group-item", "ubuntu-sans");
+            let menuPrice = document.createTextNode(USDollar.format(selectedPrice) + " - " + selectedListItem );
+            listItem.append(menuPrice);
+            newList.append(listItem);
+        }
+        let totalOrdered = document.createElement("li");
+        totalOrdered.classList.add("list-group-item", "ubuntu-sans");
+        let totalPriceTxt = document.createTextNode(USDollar.format(totalPrice))
+        totalOrdered.append(totalPriceTxt);
+        newList.append(totalOrdered)
+        displayed = true;
+    } else if (displayed === false){
+        let errorMsg = document.createElement("li");
+        errorMsg.classList.add("list-group-item", "ubuntu-sans");
+        let errorMsgText = document.createTextNode("There are no items in your cart")
+        errorMsg.append(errorMsgText);
+        newList.append(errorMsg);
+        displayed = true;
+    }
+}
+
+// hides all ordered items and the cart page
+function clearpop(){
+    var goneClass = document.getElementsByClassName("gone");
+    for (var f = 0; f < goneClass.length; f++){
+        let selectGone = goneClass.item(f)
+        selectGone.classList.add("visually-hidden")
+    }
+    displayed = false;
+    document.getElementById("listRemove").remove()
+
+}
+
 //menu (move later)
 const menu = [
     appetizers = [
@@ -469,3 +525,4 @@ const menu = [
     ],
 ]
 display("appetizers");
+priceCount()
