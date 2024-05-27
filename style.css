@@ -90,8 +90,13 @@
   position: absolute;
   right: 20px;
 }
-.Dish1{
+.jumbotron2{
+  background-image: url(photos/Dish1.avif);
+  background-size: cover;
+  background-position: center;
   display: flex;
+  align-items: flex-end;
+  justify-content: center;
   height: 300px;
-  object-fit: cover;
+  color: whitesmoke;
 }
