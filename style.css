@@ -59,13 +59,13 @@
 .btnStyle{
   width: 100%;
   height: 4rem; 
-  background-color: #efa165;
+  background-color: #3581B8;
 }
 .btnStyle:hover{
-  background-color: #ff6d00;
+  background-color: #25597E;
 }
 #active{
-  background-color: #ff6d00;
+  background-color: #25597E;
 }
 .btnMargin{
   margin-top: 5px;
