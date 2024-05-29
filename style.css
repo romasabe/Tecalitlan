@@ -43,8 +43,8 @@
   color: black;
 }
 .bg-foot{
-  background-color: rgb(152, 203, 208);
-  color: black;
+  background-color: #C8F5F9;
+  color: #2C354E;
 }
 .tecaheader{
   color: #003F91;
@@ -115,6 +115,8 @@
   padding-top: 10px;
 }
 .shopBtn{
+  position: absolute;
+  right: 10px;
   margin: auto;
   background-color: rgb(243, 238, 238);
   border: 0px;
