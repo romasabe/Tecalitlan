@@ -15,87 +15,131 @@
   <link rel="icon" type="image/x-icon" href="/photos/tecalitlanLogo.png">
 </head>
 
+<!-- Main Body of the Webpage-->
+
 <body class="ubuntu-sans">
   <!-- Nav Bar -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
+      <!--Nav bar image that takes you to the index page-->
       <a class="navbar-brand" href="index.html">
         <img src="photos/tecalitlanLogo.png" alt="Tecalitlan" width="75" height="75" class="d-inline-block">
         Tecalitlan
       </a>
+      <!--Nav bar toggle that appears when the page is too small to show all other pages-->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <!--Contains the links to the Menu and About Us page-->
       <div class="collapse navbar-collapse" id="navbarNav">
         <div class="navbar-nav">
+          <!--Menu page-->
           <a class="nav-link active navTitles currentPage ubuntu-sans" aria-current="page" href="menu.html">Menu</a>
+          <!--About Us page-->
           <a class="nav-link navTitles ubuntu-sans" href="description.html">About Us</a>
         </div>
       </div>
     </div>
   </nav>
-  <!-- Menu Display-->
+  <!-- Submit Form -->
   <div class="container" id="popOver" class="popOverStyle visually-hidden gone">
+    <!-- Close Button -->
     <button type="button" class="btn-close visually-hidden gone" aria-label="Close" onclick="clearpop()"></button>
-        <div class="visually-hidden gone">
-            <h1 class="visually-hidden gone">Order Info</h1>
-            <ul class="list-group list-group-flush visually-hidden gone">
-                <li class="list-group-item visually-hidden gone">Pickup</li>
-                <li class="list-group-item visually-hidden gone">
-                    <label for="appt" class="col-form-label visually-hidden gone">Time:</label>
-                    <input class="form-control visually-hidden gone" type="time" id="appt" name="appt" placeholder="Default input" aria-label="default input example">
-                </li>
-                <li class="list-group-item">
-                    <label for="date" class="col-form-label visually-hidden gone">Date:</label>
-                    <input class="form-control visually-hidden gone" type="date" id="date" name="date" placeholder="Default input" aria-label="default input example">
-                </li>
-            </ul>
-        </div>
-        <div class="visually-hidden gone" id="orderedDisplay">
+    <!-- Holding box -->
+    <div class="visually-hidden gone">
+      <h1 class="visually-hidden gone">Order Info</h1>
+      <!-- Order Details -->
+      <ul class="list-group list-group-flush visually-hidden gone">
+        <li class="list-group-item visually-hidden gone">Pickup</li>
+        <!-- Time Input (Doesn't do anything) -->
+        <li class="list-group-item visually-hidden gone">
+          <label for="appt" class="col-form-label visually-hidden gone">Time:</label>
+          <input class="form-control visually-hidden gone" type="time" id="appt" name="appt" placeholder="Default input"
+            aria-label="default input example">
+        </li>
+        <!-- Date Input (Doesn't do anything) -->
+        <li class="list-group-item">
+          <label for="date" class="col-form-label visually-hidden gone">Date:</label>
+          <input class="form-control visually-hidden gone" type="date" id="date" name="date" placeholder="Default input"
+            aria-label="default input example">
+        </li>
+      </ul>
+    </div>
+    <!-- Div that holds all of the ordered elements that are created through JavaScript-->
+    <div class="visually-hidden gone" id="orderedDisplay">
 
-        </div>
+    </div>
+    <!-- Button that "Submits" the order -->
+    <button id="submitBtn" class="btn btn-primary visually-hidden disabled gone" onclick="submit()">Submit
+      Order</button>
+  </div>
+  </div>
+  <!-- Main Menu page-->
+  <div class="container-fluid">
+    <!-- Title for Menu page -->
+    <div class="row anchor">
+      <div class="col-10">
+        <h1>Menu</h1>
+      </div>
+      <div class="col-2">
+        <!-- Button that displays the submit page at the top -->
+        <button type="button" class="btn btn-secondary position-relative shopBtn" onclick="cartDisplay()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-cart iconHeight"
+            viewBox="0 0 20 20">
+            <path
+              d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+          </svg>
+          <!-- badge that shows a count of how many items have been ordered -->
+          <span id="count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+            0
+            <span class="visually-hidden">Cart</span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <!--area that holds all of the display buttons-->
+    <div class="row ubuntu-sans-btn experiment-text">
+      <!-- appetizers button -->
+      <div class="col-sm-2 btnMargin">
+        <!-- Transfers the class with a index of 0 to the display() function and the element and id to the active() function -->
+        <button class="appetizers btn btnStyle ubuntu-sans-btn call" id="active"
+          onclick="display(this.classList.item(0)), active(this, this.id)">Appetizers</button>
+      </div>
+      <!-- Soups and Salads button -->
+      <div class="col-sm-2 btnMargin">
+        <!-- Transfers the class with a index of 0 to the display() function and the element and id to the active() function -->
+        <button class="soupsSalads btn btnStyle ubuntu-sans-btn call"
+          onclick="display(this.classList.item(0)), active(this, this.id)">Soups and Salads</button>
+      </div>
+      <!-- Tortillas button -->
+      <div class="col-sm-2 btnMargin">
+        <!-- Transfers the class with a index of 0 to the display() function and the element and id to the active() function -->
+        <button class="tortillas btn  btnStyle ubuntu-sans-btn call"
+          onclick="display(this.classList.item(0)), active(this, this.id)">Tortas and Tortillas</button>
+      </div>
+      <!-- Breakfast button -->
+      <div class="col-sm-2 btnMargin">
+        <!-- Transfers the class with a index of 0 to the display() function and the element and id to the active() function -->
+        <button class="breakfast btn btnStyle ubuntu-sans-btn call"
+          onclick="display(this.classList.item(0)), active(this, this.id)">Breakfast</button>
+      </div>
+      <!-- Sides button -->
+      <div class="col-sm-2 btnMargin">
+        <!-- Transfers the class with a index of 0 to the display() function and the element and id to the active() function -->
+        <button class="sides btn btnStyle ubuntu-sans-btn call"
+          onclick="display(this.classList.item(0)), active(this, this.id)">Sides</button>
+      </div>
+      <!-- Drinks button -->
+      <div class="col-sm-2 btnMargin">
+        <!-- Transfers the class with a index of 0 to the display() function and the element and id to the active() function -->
+        <button class="drinks btn btnStyle ubuntu-sans-btn call"
+          onclick="display(this.classList.item(0)), active(this, this.id)">Drinks</button>
+      </div>
     </div>
   </div>
-  <div class="container-fluid">
-        <div class="row anchor">
-            <div class="col-10">
-                <h1>Menu</h1>
-            </div>
-            <div class="col-2">
-                <button type="button" class="btn btn-secondary position-relative shopBtn" onclick="cartDisplay()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-cart iconHeight" viewBox="0 0 20 20">
-                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/> 
-                    </svg>
-                    <span id="count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
-                      0
-                      <span class="visually-hidden">Cart</span>
-                    </span>
-                </button>
-            </div>
-        </div>
-        <div class="row ubuntu-sans-btn experiment-text">
-            <div class="col-sm-2 btnMargin">
-                <button class="appetizers btn btnStyle ubuntu-sans-btn call" id="active" onclick="display(this.classList.item(0)), active(this, this.id)">Appetizers</button>
-            </div>
-            <div class="col-sm-2 btnMargin">
-                <button class ="soupsSalads btn btnStyle ubuntu-sans-btn call" onclick="display(this.classList.item(0)), active(this, this.id)">Soups and Salads</button>
-            </div>
-            <div class="col-sm-2 btnMargin">
-                <button class ="tortillas btn  btnStyle ubuntu-sans-btn call" onclick="display(this.classList.item(0)), active(this, this.id)">Tortas and Tortillas</button>
-            </div>
-            <div class="col-sm-2 btnMargin">
-                <button class ="breakfast btn btnStyle ubuntu-sans-btn call" onclick="display(this.classList.item(0)), active(this, this.id)">Breakfast</button>
-            </div>
-            <div class="col-sm-2 btnMargin">
-                <button class ="sides btn btnStyle ubuntu-sans-btn call" onclick="display(this.classList.item(0)), active(this, this.id)">Sides</button>
-            </div>
-            <div class="col-sm-2 btnMargin">
-                <button class ="drinks btn btnStyle ubuntu-sans-btn call" onclick="display(this.classList.item(0)), active(this, this.id)">Drinks</button>
-            </div>
-        </div>
-  </div>
-  <div class="container-fluid" id = "menu">
+  <!-- Where all menu items are displayed when the buttons above are called -->
+  <div class="container-fluid" id="menu">
 
   </div>
   <!-- Footer -->
@@ -126,4 +170,5 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 </body>
+
 </html>
