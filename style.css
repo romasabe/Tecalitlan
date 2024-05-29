@@ -18,7 +18,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  height: 275px;
+  height: 400px;
   color: whitesmoke;
 }
 .jumbotron1TextBg{
@@ -29,7 +29,7 @@
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 20px;
-  font-size: 200;
+  font-size: 300;
   text-align: center;
 }
 .jumbotron1Text{
@@ -143,5 +143,6 @@
   margin: 5px;
 }
 .changeCard{
-
+ width: 60rem;
+ margin: 5px;
 }
