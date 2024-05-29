@@ -50,36 +50,38 @@
   </nav>
   <!-- Submit Form -->
   <div class="container" id="popOver" class="popOverStyle visually-hidden gone">
-    <!-- Close Button -->
-    <button type="button" class="btn-close visually-hidden gone" aria-label="Close" onclick="clearpop()"></button>
-    <!-- Holding box -->
-    <div class="visually-hidden gone">
-      <h1 class="visually-hidden gone">Order Info</h1>
-      <!-- Order Details -->
-      <ul class="list-group list-group-flush visually-hidden gone">
-        <li class="list-group-item visually-hidden gone">Pickup</li>
-        <!-- Time Input (Doesn't do anything) -->
-        <li class="list-group-item visually-hidden gone">
-          <label for="appt" class="col-form-label visually-hidden gone">Time:</label>
-          <input class="form-control visually-hidden gone" type="time" id="appt" name="appt" placeholder="Default input"
-            aria-label="default input example">
-        </li>
-        <!-- Date Input (Doesn't do anything) -->
-        <li class="list-group-item">
-          <label for="date" class="col-form-label visually-hidden gone">Date:</label>
-          <input class="form-control visually-hidden gone" type="date" id="date" name="date" placeholder="Default input"
-            aria-label="default input example">
-        </li>
-      </ul>
-    </div>
-    <!-- Div that holds all of the ordered elements that are created through JavaScript-->
-    <div class="visually-hidden gone" id="orderedDisplay">
+    <div class="popOverStyle">
+      <!-- Close Button -->
+      <button type="button" class="btn-close visually-hidden gone" aria-label="Close" onclick="clearpop()"></button>
+      <!-- Holding box -->
+      <div class="visually-hidden gone">
+        <h1 class="visually-hidden gone">Order Info</h1>
+        <!-- Order Details -->
+        <ul class="list-group list-group-flush visually-hidden gone">
+          <li class="list-group-item visually-hidden gone">Pickup</li>
+          <!-- Time Input (Doesn't do anything) -->
+          <li class="list-group-item visually-hidden gone">
+            <label for="appt" class="col-form-label visually-hidden gone">Time:</label>
+            <input class="form-control visually-hidden gone" type="time" id="appt" name="appt"
+              placeholder="Default input" aria-label="default input example">
+          </li>
+          <!-- Date Input (Doesn't do anything) -->
+          <li class="list-group-item">
+            <label for="date" class="col-form-label visually-hidden gone">Date:</label>
+            <input class="form-control visually-hidden gone" type="date" id="date" name="date"
+              placeholder="Default input" aria-label="default input example">
+          </li>
+        </ul>
+      </div>
+      <!-- Div that holds all of the ordered elements that are created through JavaScript-->
+      <div class="visually-hidden gone" id="orderedDisplay">
 
+      </div>
+      <!-- Button that "Submits" the order -->
+      <button id="submitBtn" class="btn btn-primary visually-hidden disabled gone" onclick="submit()">Submit
+        Order
+      </button>
     </div>
-    <!-- Button that "Submits" the order -->
-    <button id="submitBtn" class="btn btn-primary visually-hidden disabled gone" onclick="submit()">Submit
-      Order</button>
-  </div>
   </div>
   <!-- Main Menu page-->
   <div class="container-fluid">
