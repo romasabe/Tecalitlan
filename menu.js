@@ -61,10 +61,18 @@ function select(itemName, itemClass, decline) {
                     if (decline == 1) {
                         // Removes an item
                         deOrder(sect[z]);
+                        if(displayed == true){
+                            clearpop();
+                            cartDisplay();
+                        }
                         break;
                     } else {
                         // adds an item
                         order(sect[z]);
+                        if(displayed == true){
+                            clearpop();
+                            cartDisplay();
+                        }
                         break;
                     }
                 }
@@ -80,10 +88,6 @@ function order(section) {
     ordered.push(section.menuItem);
     prices.push(section.price);
     priceCount();
-    if(displayed === true){
-        clearpop();
-        cartDisplay();
-    }
 }
 
 // remove an item from the order if it has been ordered
@@ -100,10 +104,6 @@ function deOrder(section) {
                 ordered.splice(y, 1);
                 prices.splice(y, 1);
                 priceCount();
-                if(displayed==true){
-                    clearpop();
-                    cartDisplay();
-                }
                 break;
             }
         }
@@ -274,8 +274,7 @@ function clearpop() {
         selectGone.classList.add("visually-hidden");
     }
     displayed = false;
-    document.getElementById("listRemove").remove()
-
+    document.getElementById("listRemove").remove();
 }
 
 //menu is accessed by many functions and holds all the data for all menu items
