@@ -206,6 +206,7 @@ function priceCount() {
 
 // Begins the display for all items in the cart
 function cartDisplay() {
+    clearpop();
     // checks if the card has not been displayed yet before starting the process
     if (displayed === false) {
         var popOver = document.getElementById("orderedDisplay");
