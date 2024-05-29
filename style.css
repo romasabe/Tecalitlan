@@ -43,9 +43,8 @@
   color: black;
 }
 .bg-foot{
-  padding-top: 5px;
-  background-color: black;
-  color: whitesmoke;
+  background-color: rgb(152, 203, 208);
+  color: black;
 }
 .tecaheader{
   color: #003F91;
@@ -135,7 +134,7 @@
   color: #EDFCFD;
 }
 .teca-nav{
-  background-color: #B6F2F7;
+  background-color: rgb(152, 203, 208);
 }
 .menuBtnStyle{
   margin: 5px;
