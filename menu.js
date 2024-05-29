@@ -80,9 +80,9 @@ function order(section) {
     ordered.push(section.menuItem);
     prices.push(section.price);
     priceCount();
-    if(displayed=true){
-        clearpop;
-        cartDisplay;
+    if(displayed === true){
+        clearpop();
+        cartDisplay();
     }
 }
 
@@ -100,9 +100,9 @@ function deOrder(section) {
                 ordered.splice(y, 1);
                 prices.splice(y, 1);
                 priceCount();
-                if(displayed=true){
-                    clearpop;
-                    cartDisplay;
+                if(displayed==true){
+                    clearpop();
+                    cartDisplay();
                 }
                 break;
             }
