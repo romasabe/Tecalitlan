@@ -24,7 +24,8 @@
 .jumbotron1TextBg{
   background-color: rgba(0, 0, 0, 0.75);
   position: relative;
-  bottom: 75px;
+  bottom: auto;
+  left: auto;
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
@@ -143,6 +144,6 @@
   margin: 5px;
 }
 .changeCard{
- width: 60rem;
+ width: 50rem;
  margin: 5px;
 }
