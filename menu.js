@@ -80,6 +80,10 @@ function order(section) {
     ordered.push(section.menuItem);
     prices.push(section.price);
     priceCount();
+    if(displayed=true){
+        clearpop;
+        cartDisplay;
+    }
 }
 
 // remove an item from the order if it has been ordered
@@ -96,6 +100,10 @@ function deOrder(section) {
                 ordered.splice(y, 1);
                 prices.splice(y, 1);
                 priceCount();
+                if(displayed=true){
+                    clearpop;
+                    cartDisplay;
+                }
                 break;
             }
         }
