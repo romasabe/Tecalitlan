@@ -24,7 +24,7 @@
 .jumbotron1TextBg{
   background-color: rgba(0, 0, 0, 0.75);
   position: relative;
-  bottom: 250px;
+  margin: auto;
   left: auto;
   padding-top: 10px;
   padding-left: 10px;
