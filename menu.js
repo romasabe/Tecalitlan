@@ -43,6 +43,7 @@ var USDollar = new Intl.NumberFormat('en-US', {
 // A boolean variable that is toggled on whenever the cart button is clicked
 var displayed = false;
 var submitBtn = document.getElementById("submitBtn");
+var currentTip = 0.15;
 //Main Code
 /* Called when a button on the menu screen is clicked,
     Takes the name of the item being ordered or cancelled, 
@@ -224,6 +225,11 @@ function cartDisplay() {
         encompass.append(newList);
         // checks if any items have been ordered
         if (ordered.length > 0) {
+            let hiddenItems = document.getElementsByClassName("menuGone")
+            for (var g = 0; g < hiddenItems.length; g++){
+                let menuSelectGone = hiddenItems.item(g);
+                menuSelectGone.classList.remove("visually-hidden")
+            }
             // runs through the entire ordered list and displays each item as a list with its price and name
             for (var u = 0; u < ordered.length; u++) {
                 let selectedListItem = ordered[u];
@@ -235,25 +241,20 @@ function cartDisplay() {
                 newList.append(listItem);
             }
             // displays the subtotal of the order
-            let totalOrdered = document.createElement("li");
-            totalOrdered.classList.add("list-group-item", "ubuntu-sans");
-            let totalPriceTxt = document.createTextNode("Subtotal: " + USDollar.format(totalPrice));
-            totalOrdered.append(totalPriceTxt);
-            newList.append(totalOrdered);
+                let subtotal = document.getElementById("subtotal")
+                subtotal.textContent = USDollar.format(totalPrice);
             //displays the tax of the order
-            let taxOrder = document.createElement("li");
-            taxOrder.classList.add("list-group-item", "ubuntu-sans");
-            let taxPrice = totalPrice * 0.1025;
-            let taxOrderTxt = document.createTextNode("Tax: " + USDollar.format(taxPrice));
-            taxOrder.append(taxOrderTxt);
-            newList.append(taxOrder);
-            // delivery fees
-            let fees = document.createElement("li");
-            fees.classList.add("list-group-item", "ubuntu-sans");
-            let feesNumb = 1;
-            let feesTxt = document.createTextNode("Fees: " + USDollar.format(feesNumb));
-            fees.append(feestxt);
-            newList.append(fees);
+                let taxPrice = totalPrice * 0.1025;
+                let tax = document.getElementById("tax");
+                tax.textContent = USDollar.format(taxPrice);
+            // tip
+                let tipPrice = totalPrice * currentTip;
+                let tip = document.getElementById("tip");
+                tip.textContent = USDollar.format(tipPrice);
+            // total
+                let finalTotal = totalPrice + taxPrice + tipPrice + 1;
+                let total = document.getElementById("total");
+                total.textContent = USDollar.format(finalTotal);
             // changes the order button to be active
             submitBtn.classList.remove("disabled");
             // sets the displayed value to true
@@ -286,8 +287,18 @@ function clearpop() {
         let selectGone = goneClass.item(f);
         selectGone.classList.add("visually-hidden");
     }
+    var goneMenu = document.getElementsByClassName("menuGone");
+    for (var f = 0; f < goneMenu.length; f++) {
+        let selectedremove = goneMenu.item(f);
+        let visualBool = selectedremove.classList.includes("visually-hidden")
+        if (visualBool === true){
+            break;
+        }else{
+            selectedremove.classList.add("visually-hidden");
+        }
+    }
     displayed = false;
-    document.getElementById("listRemove").remove();
+    document.getElementById("listRemove").remove()
 }
 
 //menu is accessed by many functions and holds all the data for all menu items

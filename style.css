@@ -150,3 +150,11 @@
  margin: 10px;
  margin-bottom: 20px;
 }
+.tipActive{
+  background-color: red;
+  color: white;
+}
+.tipbtnStyle{
+  background-color: rgb(179, 103, 103);
+  color: black;
+}

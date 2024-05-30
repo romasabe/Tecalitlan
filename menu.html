@@ -72,11 +72,24 @@
               placeholder="Default input" aria-label="default input example">
           </li>
         </ul>
+        <div class = "visually-hidden tipBtnHold">
+          <button class="tipbtnStyle visually-hidden menuGone tipActive" onclick="addTip(0.15)">15% <span id="fifteen"></span></button>
+          <button class="tipbtnStyle visually-hidden menuGone" onclick="addTip(0.20)">20% <span id="twenty"></span></button>
+          <button class="tipbtnStyle visually-hidden menuGone" onclick="addTip(0.30)">30% <span id="thirty"></span></button>
+        </div>
       </div>
       <!-- Div that holds all of the ordered elements that are created through JavaScript-->
       <div class="visually-hidden gone" id="orderedDisplay">
 
       </div>
+      <ul class="list-group list-group-flush visually-hidden menuGone">
+        <li class="list-group-item visually-hidden menuGone ubuntu-sans">Subtotal: <span id="subtotal"></span></li>
+        <li class="list-group-item visually-hidden menuGone ubuntu-sans">Tax: <span id="tax"></span></li>
+        <li class="list-group-item visually-hidden menuGone ubuntu-sans">Fees: $ 1.00</li>
+        <li class="list-group-item visually-hidden menuGone ubuntu-sans">Tip: <span id="tip"></span></li>
+      </ul>
+      <hr>
+      <h2 class="ubuntu-sans">Total: <span id="total"></span></h2>
       <!-- Button that "Submits" the order -->
       <button id="submitBtn" class="btn btn-primary visually-hidden disabled gone" onclick="submit()">Submit
         Order
