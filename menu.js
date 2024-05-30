@@ -61,18 +61,12 @@ function select(itemName, itemClass, decline) {
                     if (decline == 1) {
                         // Removes an item
                         deOrder(sect[z]);
-                        if(displayed == true){
-                            clearpop();
-                            cartDisplay();
-                        }
+                        update();
                         break;
                     } else {
                         // adds an item
                         order(sect[z]);
-                        if(displayed == true){
-                            clearpop();
-                            cartDisplay();
-                        };
+                        update();
                         break;
                     };
                 };
@@ -293,6 +287,7 @@ function addTip(curPercent, tipBtn, activeId){
         // gives the active id to the called button
         tipBtn.id = "tipActive";
     }
+    update();
 };
 // "submits" the order to the kitchen
 function submit(){
@@ -323,6 +318,14 @@ function clearpop() {
     displayed = false;
     document.getElementById("listRemove").remove();
 };
+
+// Update function
+function update(){
+    if(displayed == true){
+        clearpop();
+        cartDisplay();
+    };
+}
 
 //menu is accessed by many functions and holds all the data for all menu items
 const menu = [
@@ -656,6 +659,6 @@ const menu = [
 ]
 
 // Main code
-
 display("appetizers");
+addTip(0.15, document.getElementById("fifteen"), "first")
 priceCount()
