@@ -57,7 +57,7 @@
 }
 .tecastory{
   color: #191516;
-  font-size: large;
+  font-size: larger;
   text-align: center;
   padding-top: auto;
 }
@@ -165,4 +165,7 @@
 }
 .cardStyle{
  margin: 5px;
+}
+.homeCardText{
+  font-size: large;
 }
