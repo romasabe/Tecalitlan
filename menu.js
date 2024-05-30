@@ -243,7 +243,8 @@ function cartDisplay() {
             //displays the tax of the order
             let taxOrder = document.createElement("li");
             taxOrder.classList.add("list-group-item", "ubuntu-sans");
-            let taxPrice = totalPrice * 10.25
+            let taxPrice = totalPrice * 10.25;
+            let taxOrderTxt = document.createTextNode("Tax: " + USDollar.format())
             // changes the order button to be active
             submitBtn.classList.remove("disabled");
             // sets the displayed value to true
