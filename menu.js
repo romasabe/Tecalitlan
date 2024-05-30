@@ -247,6 +247,16 @@ function cartDisplay() {
                 let taxPrice = totalPrice * 0.1025;
                 let tax = document.getElementById("tax");
                 tax.textContent = USDollar.format(taxPrice);
+            //tip buttons
+                let fifPercent = document.getElementById("fifteen");
+                let curTip = totalPrice * 0.15;
+                fifPercent.textContent = USDollar.format(curTip);
+                let twePercent = document.getElementById("twenty");
+                curTip = totalPrice * 0.2;
+                twePercent.textContent = USDollar.format(curTip);
+                let thirPercent = document.getElementById("thirty");
+                curTip = totalPrice * 0.3;
+                thirPercent.textContent = USDollar.format(curTip);
             // tip
                 let tipPrice = totalPrice * currentTip;
                 let tip = document.getElementById("tip");
@@ -271,6 +281,20 @@ function cartDisplay() {
         }
     }
 }
+
+// Changes the active tip
+function addTip(curPercent, tipBtn, activeId){
+    currentTip = curPercent;
+    if (activeId != "tipActive") {
+        // runs through all buttons and removes their ids.
+        let deleteIds = document.getElementsByClassName("tipbtnStyle");
+        for (var f = 0; f < deleteIds.length; f++) {
+            deleteIds.item(f).id = null;
+        }
+        // gives the active id to the called button
+        tipBtn.id = "tipActive";
+    }
+}   
 // "submits" the order to the kitchen
 function submit(){
     clearpop();
