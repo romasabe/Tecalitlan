@@ -57,7 +57,7 @@
 }
 .tecastory{
   color: #191516;
-  font-size: larger;
+  font-size: large;
   text-align: center;
   padding-top: auto;
 }
@@ -162,4 +162,7 @@
 .tipbtnStyle{
   background-color: rgb(179, 103, 103);
   color: black;
+}
+.cardStyle{
+ margin: 5px;
 }
