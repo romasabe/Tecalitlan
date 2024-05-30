@@ -247,6 +247,8 @@ function cartDisplay() {
             let taxOrderTxt = document.createTextNode("Tax: " + USDollar.format(taxPrice));
             taxOrder.append(taxOrderTxt);
             newList.append(taxOrder);
+            // delivery fees
+            
             // changes the order button to be active
             submitBtn.classList.remove("disabled");
             // sets the displayed value to true
