@@ -57,7 +57,7 @@
 }
 .tecastory{
   color: #191516;
-  font-size: large;
+  font-size: larger;
   text-align: center;
   padding-top: auto;
 }
@@ -100,8 +100,9 @@
   justify-content: center;
   height: 300px;
   color: whitesmoke;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 2px 2px 5px #888888;
+  margin-right: 10px;
 }
 .unbold{
   font-style: normal;
@@ -152,6 +153,7 @@
  margin: 10px;
  margin-bottom: 20px;
  box-shadow: 2px 2px 5px #888888;
+ border-radius: 20px;
 }
 #tipActive{
   background-color: red;
