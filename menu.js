@@ -1,5 +1,4 @@
 /* Important built in functions to note:
-
     document.getElementById(""): gets an element by its id
     document.getElementsByClassName(""): puts all elements of a class in an array like object
     .push(): adds a value to the end of an array

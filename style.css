@@ -20,6 +20,7 @@
   justify-content: center;
   height: 400px;
   color: whitesmoke;
+  padding-bottom: 5px;
 }
 .jumbotron1TextBg{
   background-color: rgba(0, 0, 0, 0.75);
@@ -50,8 +51,8 @@
   color: #2C354E;
 }
 .tecaheader{
-  padding-top:10px;
-  padding-bottom:10px;
+  padding-top:20px;
+  padding-bottom:15px;
   color: #003F91;
 }
 .tecastory{
@@ -146,6 +147,5 @@
   margin: 5px;
 }
 .changeCard{
- width: 25rem;
  margin: 5px;
 }
