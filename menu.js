@@ -234,12 +234,16 @@ function cartDisplay() {
                 listItem.append(menuPrice);
                 newList.append(listItem);
             }
-            // displays the final price of the order
+            // displays the subtotal of the order
             let totalOrdered = document.createElement("li");
             totalOrdered.classList.add("list-group-item", "ubuntu-sans");
-            let totalPriceTxt = document.createTextNode("Total: " + USDollar.format(totalPrice));
+            let totalPriceTxt = document.createTextNode("Subtotal: " + USDollar.format(totalPrice));
             totalOrdered.append(totalPriceTxt);
             newList.append(totalOrdered);
+            //displays the tax of the order
+            let taxOrder = document.createElement("li");
+            taxOrder.classList.add("list-group-item", "ubuntu-sans");
+            let taxPrice = totalPrice * 10.25
             // changes the order button to be active
             submitBtn.classList.remove("disabled");
             // sets the displayed value to true
