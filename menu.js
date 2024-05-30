@@ -72,15 +72,14 @@ function select(itemName, itemClass, decline) {
                         if(displayed == true){
                             clearpop();
                             cartDisplay();
-                        }
+                        };
                         break;
-                    }
-                }
-            }
-
-        }
-    }
-}
+                    };
+                };
+            };
+        };
+    };
+};
 
 // adds an item to the order and updates the total price
 function order(section) {
@@ -88,12 +87,12 @@ function order(section) {
     ordered.push(section.menuItem);
     prices.push(section.price);
     priceCount();
-}
+};
 
 // remove an item from the order if it has been ordered
 function deOrder(section) {
     // checks if the item that called has already been ordered
-    let includeBool = ordered.includes(String(section.menuItem))
+    let includeBool = ordered.includes(String(section.menuItem));
     // if the item has been ordered the function will continue
     if (includeBool === true) {
         totalPrice -= section.price;
@@ -105,14 +104,14 @@ function deOrder(section) {
                 prices.splice(y, 1);
                 priceCount();
                 break;
-            }
-        }
-    }
-}
+            };
+        };
+    };
+};
 
 // displays all items in a section calls the removeElements() and createCard(menuStuff, section) functions
 function display(sectClass) {
-    removeElements()
+    removeElements();
     // Runs through the entire menu to find the section within the menu
     for (var x = 0; x < menu.length; x++) {
         let sectName = menu[x][0];
@@ -127,22 +126,22 @@ function display(sectClass) {
                 createCard(sectName, sect[p]);
             }
             break;
-        }
-    }
-}
+        };
+    };
+};
 
 // removes all displayed list items if there is something displayed when called
 function removeElements() {
     if (sectionDiv != null) {
-        sectionDiv.remove()
+        sectionDiv.remove();
     }
-}
+};
 
 // Creates each individual menu item
 function createCard(menuStuff, section) {
     // Creates div that defines the size of each card
     let sizingDiv = document.createElement("div");
-    sizingDiv.classList.add("col-sm-6", "mb-3", "mb-sm-0")
+    sizingDiv.classList.add("col-sm-6", "mb-3", "mb-sm-0");
     sectionDiv.appendChild(sizingDiv);
     // Creates the div that defines the bootstrap card
     let newCard = document.createElement("div");
@@ -184,7 +183,7 @@ function createCard(menuStuff, section) {
     buttonStyle.append(newButton, removeButton);
     // adds the title, price, and buttons all at the same time
     newContent.append(newTitle, newPrice, buttonStyle);
-}
+};
 
 // called whenever a button to change the menu items is pressed.
 function active(itemGiven, selectId) {
@@ -194,15 +193,15 @@ function active(itemGiven, selectId) {
         let removeIds = document.getElementsByClassName("call");
         for (var f = 0; f < removeIds.length; f++) {
             removeIds.item(f).id = null;
-        }
+        };
         // gives the active id to the called button
         itemGiven.id = "active";
-    }
-}
+    };
+};
 // When called updates the total price and count and displays it.
 function priceCount() {
     dispCount.textContent = ordered.length;
-}
+};
 
 // Begins the display for all items in the cart
 function cartDisplay() {
@@ -225,11 +224,11 @@ function cartDisplay() {
         encompass.append(newList);
         // checks if any items have been ordered
         if (ordered.length > 0) {
-            let hiddenItems = document.getElementsByClassName("menuGone")
+            let hiddenItems = document.getElementsByClassName("menuGone");
             for (var g = 0; g < hiddenItems.length; g++){
                 let menuSelectGone = hiddenItems.item(g);
-                menuSelectGone.classList.remove("visually-hidden")
-            }
+                menuSelectGone.classList.remove("visually-hidden");
+            };
             // runs through the entire ordered list and displays each item as a list with its price and name
             for (var u = 0; u < ordered.length; u++) {
                 let selectedListItem = ordered[u];
@@ -278,9 +277,9 @@ function cartDisplay() {
             errorMsg.append(errorMsgText);
             newList.append(errorMsg);
             displayed = true;
-        }
-    }
-}
+        };
+    };
+};
 
 // Changes the active tip
 function addTip(curPercent, tipBtn, activeId){
@@ -290,11 +289,11 @@ function addTip(curPercent, tipBtn, activeId){
         let deleteIds = document.getElementsByClassName("tipbtnStyle");
         for (var f = 0; f < deleteIds.length; f++) {
             deleteIds.item(f).id = null;
-        }
+        };
         // gives the active id to the called button
         tipBtn.id = "tipActive";
     }
-}   
+};
 // "submits" the order to the kitchen
 function submit(){
     clearpop();
@@ -303,7 +302,7 @@ function submit(){
     ordered.splice(0, ordered.length);
     prices.splice(0, prices.length);
     priceCount();
-}
+};
 // hides all ordered items and deletes the list of ordered items aswell as makes the displayed boolean false
 function clearpop() {
     var goneClass = document.getElementsByClassName("gone");
@@ -314,7 +313,7 @@ function clearpop() {
     var goneMenu = document.getElementsByClassName("menuGone");
     for (var f = 0; f < goneMenu.length; f++) {
         let selectedremove = goneMenu.item(f);
-        let visualBool = selectedremove.classList.includes("visually-hidden")
+        let visualBool = selectedremove.classList.contains("visually-hidden");
         if (visualBool === true){
             break;
         }else{
@@ -322,8 +321,8 @@ function clearpop() {
         }
     }
     displayed = false;
-    document.getElementById("listRemove").remove()
-}
+    document.getElementById("listRemove").remove();
+};
 
 //menu is accessed by many functions and holds all the data for all menu items
 const menu = [
