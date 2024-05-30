@@ -650,5 +650,5 @@ const menu = [
 
 // Main code
 display("appetizers");
-addTip(0.15, document.getElementById("fifteen"), "first")
+addTip(0.15, document.getElementById("first"), "first")
 priceCount()
