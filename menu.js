@@ -249,6 +249,9 @@ function cartDisplay() {
             newList.append(taxOrder);
             // delivery fees
             let fees = document.createElement("li");
+            fees.classList.add("list-group-item", "ubuntu-sans");
+            let feesNumb = 1;
+            let feesTxt = document.createTextNode("Fees: " + USDollar.format(feesNumb));
             
             // changes the order button to be active
             submitBtn.classList.remove("disabled");
