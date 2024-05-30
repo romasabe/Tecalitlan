@@ -248,6 +248,7 @@ function cartDisplay() {
             taxOrder.append(taxOrderTxt);
             newList.append(taxOrder);
             // delivery fees
+            let fees = document.createElement("li");
             
             // changes the order button to be active
             submitBtn.classList.remove("disabled");
