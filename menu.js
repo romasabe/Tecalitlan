@@ -252,7 +252,8 @@ function cartDisplay() {
             fees.classList.add("list-group-item", "ubuntu-sans");
             let feesNumb = 1;
             let feesTxt = document.createTextNode("Fees: " + USDollar.format(feesNumb));
-            
+            fees.append(feestxt);
+            newList.append(fees);
             // changes the order button to be active
             submitBtn.classList.remove("disabled");
             // sets the displayed value to true
