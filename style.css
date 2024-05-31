@@ -118,6 +118,7 @@
   height: auto;
   padding: auto;
   right: 15px;
+  margin-left: 20px;
 }
 #count{
   background-color: #ff6d00;
@@ -132,8 +133,13 @@
   margin: auto;
   background-color: #a4ffc4;
   border: 0px;
-  width: 50px;
-  margin-left: 20px;
+  width: 100px;
+}
+.shopBtn:hover{
+  
+}
+.shopBtn:active{
+  
 }
 .popOverStyle{
   background-color: rgb(255, 255, 255);
