@@ -18,27 +18,23 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  height: 400px;
+  height: 275px;
   color: whitesmoke;
-  margin-bottom: 10px;
 }
 .jumbotron1TextBg{
   background-color: rgba(0, 0, 0, 0.75);
   position: relative;
-  margin: auto;
-  left: auto;
+  bottom: 75px;
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 20px;
-  font-size: 500;
+  font-size: 200;
   text-align: center;
 }
 .jumbotron1Text{
   color: whitesmoke;
   text-align: center;
-  padding: 5px;
-  margin-top: 10px;
 }
 .whiteText{
   color:whitesmoke;
@@ -47,19 +43,15 @@
   color: black;
 }
 .bg-foot{
-  background-color: #2C354E;
-  color: #2C354E;
+  padding: 5px;
+  background-color: black;
+  color: whitesmoke;
 }
 .tecaheader{
-  padding-top:20px;
-  padding-bottom:15px;
   color: #003F91;
 }
 .tecastory{
   color: #191516;
- font-size: x-large;
-  text-align: center;
-  padding-top: auto;
 }
 .tecaname{
   color: 011627;
@@ -67,13 +59,13 @@
 .btnStyle{
   width: 100%;
   height: 4rem; 
-  background-color: #c0dbef;
+  background-color: #3581B8;
 }
 .btnStyle:hover{
-  background-color: #75b3df;
+  background-color: #25597E;
 }
 #active{
-  background-color: #75b3df;
+  background-color: #25597E;
 }
 .btnMargin{
   margin-top: 5px;
@@ -100,8 +92,6 @@
   justify-content: center;
   height: 300px;
   color: whitesmoke;
-  border-radius: 20px;
-  box-shadow: 2px 2px 5px #888888;
 }
 .unbold{
   font-style: normal;
@@ -117,8 +107,6 @@
   width: 50px;
   height: auto;
   padding: auto;
-  right: 15px;
-  padding-right: 5px;
 }
 #count{
   background-color: #ff6d00;
@@ -128,62 +116,27 @@
   padding-top: 10px;
 }
 .shopBtn{
-  position: absolute;
-  right: 10px;
   margin: auto;
-  background-color: #a4ffc4;
+  background-color: rgb(243, 238, 238);
   border: 0px;
-  width: 60px;
-}
-.shopBtn:hover{
-  background-color: #A1E326;
-}
-.shopBtn:active{
-  background-color: #7eb519;
 }
 .popOverStyle{
+  position: fixed;
+  left: auto;
+  top: auto;
+  z-index: 5;
   background-color: rgb(255, 255, 255);
   border: #191516 2px;
 }
-.teca-body{
-  background-color: #61D181;
+.experiment{
+  background-color: #DAFAFB;
 }
-.teca-text{
+.experiment-text{
   color: #EDFCFD;
 }
-.teca-nav{
-  background-color: #00B88A;
+.experiment-nav{
+  background-color: #B6F2F7;
 }
-.menuBtnStyleone{
+.menuBtnStyle{
   margin: 5px;
-  background-color: #22b40c;
-  color: whitesmoke;
-}
-.menuBtnStyletwo{
-  margin: 5px;
-  background-color: #d10000;
-  color: whitesmoke;
-}
-.changeCard{
- margin-top: 10px;
- margin-bottom: 20px;
- box-shadow: 2px 2px 5px #888888;
- border-radius: 20px;
-}
-#tipActive{
-  background-color: red;
-  color: white;
-}
-.tipbtnStyle{
-  background-color: rgb(179, 103, 103);
-  color: black;
-}
-.cardStyle{
- margin: 5px;
-}
-.homeCardText{
-  font-size: larger;
-}
-.chipCard{
-  margin-right: 20px;
 }
