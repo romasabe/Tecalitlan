@@ -399,24 +399,24 @@ const menu = [
             price: 12.00,
             menuIndex: 1,
             group: "Breakfast",
-            menuItem: "Breakfest Burrito",
+            menuItem: "Breakfast Burrito",
         },
         huevos_a_la_mexicana = {
             price: 13.00,
             menuIndex: 2,
-            group: "Breakfest",
+            group: "Breakfast",
             menuItem: "Huevos a La Mexicana"
         },
         pancakes_la_abulita = {
             price: 9.00,
             menuIndex: 3,
-            group: "Breakfest",
+            group: "Breakfast",
             menuItem: "Pancakes La Abuelita",
         },
         mollete = {
             price: 8.00,
             menuIndex: 4,
-            group: "Breakfest",
+            group: "Breakfast",
             menuItem: "Mollete",
         },
     ],
