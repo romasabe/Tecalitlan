@@ -649,7 +649,7 @@ const menu = [
 ]
 
 // Main code
-var firstTip = document.getElementsByClassName("first").item(0)
+var firstTip = document.getElementsByClassName("first").item(0);
 display("appetizers");
 addTip(0.15, firstTip, "first")
-priceCount()
+priceCount();
