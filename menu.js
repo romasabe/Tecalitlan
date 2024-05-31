@@ -499,14 +499,14 @@ const menu = [
             price: 1.00,
             menuIndex: 0,
             group: "Sides",
-            pic: "menuPics/sourcram2.jpg",
+            pic: "menuPics/sourcream2.jpg",
             menuItem: "Sour Cream",
         },
         guacamole = {
             price: 2.00,
             menuIndex: 1,
             group: "Sides",
-            pic: "menuPics/sedGuacamole.avif",
+            pic: "menuPics/sideGuacamole.avif",
             menuItem: "Guacamole",
         },
         rice = {
