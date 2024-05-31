@@ -85,7 +85,7 @@
       <ul class="list-group list-group-flush visually-hidden menuGone">
         <li class="list-group-item visually-hidden menuGone ubuntu-sans">Subtotal: <span id="subtotal"></span></li>
         <li class="list-group-item visually-hidden menuGone ubuntu-sans">Tax: <span id="tax"></span></li>
-        <li class="list-group-item visually-hidden menuGone ubuntu-sans">Fees: $ 1.00</li>
+        <li class="list-group-item visually-hidden menuGone ubuntu-sans">Fees: $1.00</li>
         <li class="list-group-item visually-hidden menuGone ubuntu-sans">Tip: <span id="tip"></span></li>
       </ul>
       <hr class="visually-hidden menuGone">
@@ -100,13 +100,11 @@
   <div class="container-fluid">
     <!-- Title for Menu page -->
     <div class="row anchor">
-      <div class="col-sm-10">
+      <div class="col-sm-12">
         <h1>Menu</h1>
-      </div>
+      
         <!-- Button that displays the submit page at the top -->
-      <div class="row">
-        <div class="col-sm-10"></div>
-        <div class="col-sm-2">
+        <div class="shopSpacing">
           <button type="button" class="btn btn-secondary position-relative shopBtn" onclick="cartDisplay()">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-cart iconHeight" viewBox="0 0 20 20">
               <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
@@ -120,40 +118,41 @@
         </div>
       </div>
     </div>
+    
     <!--area that holds all of the display buttons-->
     <div class="row ubuntu-sans-btn experiment-text">
       <!-- appetizers button -->
-      <div class="col-sm-2 btnMargin">
+      <div class="col-md-2 btnMargin">
         <!-- Transfers the class with a index of 0 to the display() function and the element and id to the active() function -->
         <button class="appetizers btn btnStyle ubuntu-sans-btn call" id="active"
           onclick="display(this.classList.item(0)), active(this, this.id)">Appetizers</button>
       </div>
       <!-- Soups and Salads button -->
-      <div class="col-sm-2 btnMargin">
+      <div class="col-md-2 btnMargin">
         <!-- Transfers the class with a index of 0 to the display() function and the element and id to the active() function -->
         <button class="soupsSalads btn btnStyle ubuntu-sans-btn call"
           onclick="display(this.classList.item(0)), active(this, this.id)">Soups and Salads</button>
       </div>
       <!-- Tortillas button -->
-      <div class="col-sm-2 btnMargin">
+      <div class="col-md-2 btnMargin">
         <!-- Transfers the class with a index of 0 to the display() function and the element and id to the active() function -->
         <button class="tortillas btn  btnStyle ubuntu-sans-btn call"
           onclick="display(this.classList.item(0)), active(this, this.id)">Tortas and Tortillas</button>
       </div>
       <!-- Breakfast button -->
-      <div class="col-sm-2 btnMargin">
+      <div class="col-md-2 btnMargin">
         <!-- Transfers the class with a index of 0 to the display() function and the element and id to the active() function -->
         <button class="breakfast btn btnStyle ubuntu-sans-btn call"
           onclick="display(this.classList.item(0)), active(this, this.id)">Breakfast</button>
       </div>
       <!-- Sides button -->
-      <div class="col-sm-2 btnMargin">
+      <div class="col-md-2 btnMargin">
         <!-- Transfers the class with a index of 0 to the display() function and the element and id to the active() function -->
         <button class="sides btn btnStyle ubuntu-sans-btn call"
           onclick="display(this.classList.item(0)), active(this, this.id)">Sides</button>
       </div>
       <!-- Drinks button -->
-      <div class="col-sm-2 btnMargin">
+      <div class="col-md-2 btnMargin">
         <!-- Transfers the class with a index of 0 to the display() function and the element and id to the active() function -->
         <button class="drinks btn btnStyle ubuntu-sans-btn call"
           onclick="display(this.classList.item(0)), active(this, this.id)">Drinks</button>
