@@ -130,8 +130,9 @@
   position: absolute;
   right: 10px;
   margin: auto;
-  background-color: rgb(243, 238, 238);
+  background-color: #84feaf;
   border: 0px;
+  width: 30px;
 }
 .popOverStyle{
   background-color: rgb(255, 255, 255);
@@ -178,7 +179,4 @@
 }
 .chipCard{
   margin-right: 20px;
-}
-.cartcolor{
-  background-color: #b0f0c7;
 }
