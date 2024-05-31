@@ -117,6 +117,8 @@
   width: 50px;
   height: auto;
   padding: auto;
+  position: absolute;
+  right: 30px;
 }
 #count{
   background-color: #ff6d00;
@@ -137,19 +139,26 @@
   border: #191516 2px;
 }
 .teca-body{
-  background-color: #faec9b;
+  background-color: #61D181;
 }
 .teca-text{
   color: #EDFCFD;
 }
 .teca-nav{
-  background-color: #37d25e;
+  background-color: #00B88A;
 }
-.menuBtnStyle{
+.menuBtnStyleone{
   margin: 5px;
+  background-color: #22b40c;
+  color: whitesmoke;
+}
+.menuBtnStyletwo{
+  margin: 5px;
+  background-color: #d10000;
+  color: whitesmoke;
 }
 .changeCard{
- margin: 10px;
+ margin-top: 10px;
  margin-bottom: 20px;
  box-shadow: 2px 2px 5px #888888;
  border-radius: 20px;
@@ -167,4 +176,7 @@
 }
 .homeCardText{
   font-size: larger;
+}
+.chipCard{
+  margin-right: 20px;
 }

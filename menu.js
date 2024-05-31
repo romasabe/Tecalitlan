@@ -161,14 +161,14 @@ function createCard(menuStuff, section) {
     buttonStyle.classList.add("d-grid", "gap-2" ,"d-md-block");
     // Creates the order button and adds its corresponding ids, classes, and onclick events.
     let newButton = document.createElement("button");
-    newButton.classList.add(menuStuff, "btn", "btn-primary", "newElement", "menuBtnStyle");
+    newButton.classList.add(menuStuff, "btn", "newElement", "menuBtnStyleone");
     newButton.id = String(section.menuItem);
     newButton.onclick = function () { select(this.id, this.classList.item(0), 0); };
     let buttonText = document.createTextNode("Add");
     newButton.appendChild(buttonText);
     // Creates the remove button and adds its corresponding ids, classes, and onclick events.
     let removeButton = document.createElement("button");
-    removeButton.classList.add(menuStuff, "btn", "btn-primary", "menuBtnStyle", "newElement");
+    removeButton.classList.add(menuStuff, "btn", "menuBtnStyletwo", "newElement");
     removeButton.id = String(section.menuItem);
     removeButton.onclick = function () { select(this.id, this.classList.item(0), 1); };
     let removeText = document.createTextNode("Remove");
@@ -429,53 +429,11 @@ const menu = [
             group: "Tacos",
             menuItem: "3 Taco Order",
         },
-        three_taco_dinner = {
-            price: 17.75,
-            menuIndex: 1,
-            group: "Tacos",
-            menuItem: "3 Taco Dinner",
-        },
-        kids_taco_dinner = {
-            price: 9.00,
-            menuIndex: 2,
-            group: "Tacos",
-            menuItem: "Kids Taco Dinner",
-        },
-        quesabirria_dinner = {
-            price: 20.00,
-            menuIndex: 3,
-            group: "Tacos",
-            menuItem: "Quesabirria Dinner",
-        },
-        porkbelly_three_taco_dinner = {
-            price: 19.00,
-            menuIndex: 4,
-            group: "Tacos",
-            menuItem: "Pork Belly 3 Taco Order",
-        },
         burrito = {
             price: 12.00,
             menuIndex: 5,
             group: "Burritos",
             menuItem: "Burrito",
-        },
-        burrito_combo = {
-            price: 12.00,
-            menuIndex: 6,
-            group: "Burritos",
-            menuItem: "Burrito Combo",
-        },
-        burrito_dinner = {
-            price: 14.00,
-            menuIndex: 7,
-            group: "Burritos",
-            menuItem: "Burrito Dinner",
-        },
-        burrito_combo_dinner = {
-            price: 15.00,
-            menuIndex: 8,
-            group: "Burritos",
-            menuItem: "Burrito Combo Dinner",
         },
         el_jefe_burrito = {
             price: 18.00,
@@ -489,59 +447,17 @@ const menu = [
             group: "Tortas",
             menuItem: "Torta",
         },
-        torta_combo = {
-            price: 10.00,
-            menuIndex: 11,
-            group: "Tortas",
-            menuItem: "Torta Combo",
-        },
-        torta_dinner = {
-            price: 13.00,
-            menuIndex: 12,
-            group: "Tortas",
-            menuItem: "Torta Dinner",
-        },
-        torta_combo_dinner = {
-            price: 14.00,
-            menuIndex: 13,
-            group: "Tortas",
-            menuItem: "Torta Combo Dinner",
-        },
         quesabirria = {
             price: 12.00,
             menuIndex: 14,
             group: "Tortas",
             menuItem: "Quesabirria",
         },
-        steak_fajitas = {
-            price: 26.00,
-            menuIndex: 15,
-            group: "Fajitas",
-            menuItem: "Steak Fajitas",
-        },
-        veggie_fajitas = {
-            price: 19.00,
-            menuIndex: 16,
-            group: "Fajtas",
-            menuItem: "Veggie Fajitas",
-        },
         chicken_fajitas = {
             price: 22.00,
             menuIndex: 17,
             group: "Fajitas",
             menuItem: "Chicken Fajitas",
-        },
-        steak_chicken_fajitas = {
-            price: 25.00,
-            menuIndex: 18,
-            group: "Fajitas",
-            menuItem: "Steak and Chicken Fajitas",
-        },
-        shrimp_and_veggie_fajitas = {
-            price: 25.00,
-            menuIndex: 19,
-            group: "Fajitas",
-            menuItem: "Shrimp and Veggie Fajitas",
         },
     ],
     //Sides Menu

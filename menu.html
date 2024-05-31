@@ -73,9 +73,9 @@
           </li>
         </ul>
         <div class = "visually-hidden tipBtnHold menuGone">
-          <button class="tipbtnStyle visually-hidden menuGone first" id="tipActive" onclick="addTip(0.15, this, this.id)">15%</button>
-          <button class="tipbtnStyle visually-hidden menuGone" onclick="addTip(0.20, this, this.id)">20%</button>
-          <button class="tipbtnStyle visually-hidden menuGone" onclick="addTip(0.30, this, this.id)">30%</button>
+          <button class="btn tipbtnStyle visually-hidden menuGone first" id="tipActive" onclick="addTip(0.15, this, this.id)">15%</button>
+          <button class="btn tipbtnStyle visually-hidden menuGone" onclick="addTip(0.20, this, this.id)">20%</button>
+          <button class="btn tipbtnStyle visually-hidden menuGone" onclick="addTip(0.30, this, this.id)">30%</button>
         </div>
       </div>
       <!-- Div that holds all of the ordered elements that are created through JavaScript-->
@@ -103,13 +103,10 @@
       <div class="col-10">
         <h1>Menu</h1>
       </div>
-      <div class="col-2">
         <!-- Button that displays the submit page at the top -->
         <button type="button" class="btn btn-secondary position-relative shopBtn" onclick="cartDisplay()">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-cart iconHeight"
-            viewBox="0 0 20 20">
-            <path
-              d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-cart iconHeight " viewBox="0 0 20 20">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
           </svg>
           <!-- badge that shows a count of how many items have been ordered -->
           <span id="count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
@@ -117,7 +114,6 @@
             <span class="visually-hidden">Cart</span>
           </span>
         </button>
-      </div>
     </div>
     <!--area that holds all of the display buttons-->
     <div class="row ubuntu-sans-btn experiment-text">
