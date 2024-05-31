@@ -118,6 +118,7 @@
   height: auto;
   padding: auto;
   right: 15px;
+  padding-right: 5px;
 }
 #count{
   background-color: #ff6d00;
