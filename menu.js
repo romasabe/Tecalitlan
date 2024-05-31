@@ -435,12 +435,6 @@ const menu = [
             group: "Burritos",
             menuItem: "Burrito",
         },
-        el_jefe_burrito = {
-            price: 18.00,
-            menuIndex: 9,
-            group: "Burritos",
-            menuItem: "El Jefe Burrito",
-        },
         torta = {
             price: 9.50,
             menuIndex: 10,

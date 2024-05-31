@@ -133,13 +133,13 @@
   margin: auto;
   background-color: #a4ffc4;
   border: 0px;
-  width: 100px;
+  width: 75px;
 }
 .shopBtn:hover{
-  
+  background-color: #A1E326;
 }
 .shopBtn:active{
-  
+  background-color: #7eb519;
 }
 .popOverStyle{
   background-color: rgb(255, 255, 255);
