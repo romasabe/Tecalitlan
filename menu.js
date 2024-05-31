@@ -139,12 +139,30 @@ function createCard(menuStuff, section) {
     sectionDiv.appendChild(sizingDiv);
     // Creates the div that defines the bootstrap card
     let newCard = document.createElement("div");
-    newCard.classList.add("card", "cardStyle");
+    newCard.classList.add("card", "cardStyle", "mb-3");
     sizingDiv.appendChild(newCard);
+    // row within card
+    let cardRow = document.createElement("div");
+    cardRow.classList.add("row", "g-0");
+    newCard.append(cardRow);
+    // image sizer
+    let imgSizer = document.createElement("div");
+    imgSizer.classList.add("col-md-4");
+    cardRow.append(imgSizer);
+    // image
+    let imageCard = document.createElement("img");
+    imageCard.setAttribute("src", section.pic);
+    imageCard.setAttribute("alt", "image of a menu item");
+    imageCard.classList.add("img-fluid", "rounded-start");
+    imgSizer.append(imageCard);
+    // body sizer
+    let contentSizer = document.createElement("div");
+    contentSizer.classList.add("col-md-8");
+    cardRow.append(contentSizer);
     // Creates the div that holds the bootstrap card body
     let newContent = document.createElement("div");
     newContent.classList.add("card-body", "newElement");
-    newCard.appendChild(newContent);
+    contentSizer.appendChild(newContent);
     // creates the title for the element
     let newTitle = document.createElement("h5");
     newTitle.classList.add("card-title", "newElement");
@@ -346,14 +364,14 @@ const menu = [
             price: 10.00,
             menuIndex: 3,
             group: "appetizers",
-            pic: "menuPics/",
+            pic: "menuPics/quesoFundido.avif",
             menuItem: "Queso Fundido",
         },
         nachos = {
             price: 10.00,
             menuIndex: 4,
             group: "appetizers",
-            pic: "menuPics/",
+            pic: "menuPics/nachos.avif",
             menuItem: "Nachos",
         },
     ],
@@ -364,35 +382,35 @@ const menu = [
             price: 13.00,
             menuIndex: 0,
             group: "Soups and Salads",
-            pic: "menuPics/",
+            pic: "menuPics/caldoPollo.avif",
             menuItem: "Caldo de Pollo",
         },
         sopa_de_torilla = {
             price: 6.00,
             menuIndex: 1,
             group: "Soups and Salads",
-            pic: "menuPics/",
+            pic: "menuPics/sopaTortilla.webp",
             menuItem: "Sopa de Tortilla",
         },
         pozole = {
             price: 10.00,
             menuIndex: 2,
             group: "Soups and Salads",
-            pic: "menuPics/",
+            pic: "menuPics/pozole.jpg",
             menuItem: "Pozole",
         },
         taco_salad = {
             price: 14.00,
             menuIndex: 3,
             group: "Soups and Salads",
-            pic: "menuPics/",
+            pic: "menuPics/tacoSalad.avif",
             menuItem: "Taco Salad",
         },
         tecalitlan_salad = {
             price: 14.00,
             menuIndex: 4,
             group: "Soups and Salads",
-            pic: "menuPics/",
+            pic: "menuPics/tecaSalad.jpg",
             menuItem: "Tecalitlan Salad",
         },
     ],
@@ -403,35 +421,35 @@ const menu = [
             price: 14.00,
             menuIndex: 0,
             group: "Breakfast",
-            pic: "menuPics/",
+            pic: "menuPics/chilaquiles.avif",
             menuItem: "Chilaquiles",
         },
         breakfast_burrito = {
             price: 12.00,
             menuIndex: 1,
             group: "Breakfast",
-            pic: "menuPics/",
+            pic: "menuPics/breakfastBurrito.webp",
             menuItem: "Breakfast Burrito",
         },
         huevos_a_la_mexicana = {
             price: 13.00,
             menuIndex: 2,
             group: "Breakfast",
-            pic: "menuPics/",
+            pic: "menuPics/huevos.jpg",
             menuItem: "Huevos a La Mexicana"
         },
         pancakes_la_abulita = {
             price: 9.00,
             menuIndex: 3,
             group: "Breakfast",
-            pic: "menuPics/",
+            pic: "menuPics/pancakes2.jpg",
             menuItem: "Pancakes La Abuelita",
         },
         mollete = {
             price: 8.00,
             menuIndex: 4,
             group: "Breakfast",
-            pic: "menuPics/",
+            pic: "menuPics/mollete.webp",
             menuItem: "Mollete",
         },
     ],
@@ -442,35 +460,35 @@ const menu = [
             price: 12.75,
             menuIndex: 0,
             group: "Tacos",
-            pic: "menuPics/",
+            pic: "menuPics/threeTaco.avif",
             menuItem: "3 Taco Order",
         },
         burrito = {
             price: 12.00,
             menuIndex: 5,
             group: "Burritos",
-            pic: "menuPics/",
+            pic: "menuPics/burrito.avif",
             menuItem: "Burrito",
         },
         torta = {
             price: 9.50,
             menuIndex: 10,
             group: "Tortas",
-            pic: "menuPics/",
+            pic: "menuPics/torta.avif",
             menuItem: "Torta",
         },
         quesabirria = {
             price: 12.00,
             menuIndex: 14,
             group: "Tortas",
-            pic: "menuPics/",
+            pic: "menuPics/quesabirria.avif",
             menuItem: "Quesabirria",
         },
         chicken_fajitas = {
             price: 22.00,
             menuIndex: 17,
             group: "Fajitas",
-            pic: "menuPics/",
+            pic: "menuPics/chicFajitas.webp",
             menuItem: "Chicken Fajitas",
         },
     ],
@@ -481,35 +499,35 @@ const menu = [
             price: 1.00,
             menuIndex: 0,
             group: "Sides",
-            pic: "menuPics/",
+            pic: "menuPics/sourcram2.jpg",
             menuItem: "Sour Cream",
         },
         guacamole = {
             price: 2.00,
             menuIndex: 1,
             group: "Sides",
-            pic: "menuPics/",
+            pic: "menuPics/sedGuacamole.avif",
             menuItem: "Guacamole",
         },
         rice = {
             price: 4.00,
             menuIndex: 2,
             group: "Sides",
-            pic: "menuPics/",
+            pic: "menuPics/arroz2.jpg",
             menuItem: "Rice",
         },
         beans = {
             price: 4.00,
             menuIndex: 3,
             group: "Sides",
-            pic: "menuPics/",
+            pic: "menuPics/refriedBeans.jpg",
             menuItem: "Beans",
         },
         shredded_cheese = {
             price: 2.00,
             menuIndex: 4,
             group: "Sides",
-            pic: "menuPics/",
+            pic: "menuPics/cheese2.jpg",
             menuItem: "Shredded Cheese",
         },
     ],
@@ -520,35 +538,35 @@ const menu = [
             price: 3.00,
             menuIndex: 0,
             group: "Drinks",
-            pic: "menuPics/",
+            pic: "menuPics/mexicanCoke.jpg",
             menuItem: "Coke",
         },
         sprite = {
             price: 3.00,
             menuIndex: 1,
             group: "Drinks",
-            pic: "menuPics/",
+            pic: "menuPics/sprite.webp",
             menuItem: "Sprite",
         },
         horchata = {
             price: 3.50,
             menuIndex: 2,
             group: "Drinks",
-            pic: "menuPics/",
+            pic: "menuPics/horchata.jpg",
             menuItem: "Horchata",
         },
         topo_chico = {
             price: 4.00,
             menuIndex: 3,
             group: "Drinks",
-            pic: "menuPics/",
+            pic: "menuPics/topoChico.jpg",
             menuItem: "Topo-Chico",
         },
         jarrito = {
             price: 4.00,
             menuIndex: 4,
             group: "Drinks",
-            pic: "menuPics/",
+            pic: "menuPics/jarritos.avif",
             menuItem: "Jarrito",
         },
     ],
