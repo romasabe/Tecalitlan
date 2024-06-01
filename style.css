@@ -1,17 +1,20 @@
-.navTitles{
+.navTitles {
   font-size: 30px;
 }
+
 .ubuntu-sans {
   font-family: "Ubuntu Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  font-variation-settings:"wdth" 100;
+  font-variation-settings: "wdth" 100;
 }
-.currentPage{
+
+.currentPage {
   font-weight: 600;
 }
-.jumbotron1{
+
+.jumbotron1 {
   background-image: url(photos/tortilla_image.avif);
   background-size: cover;
   background-position: center;
@@ -22,7 +25,8 @@
   color: whitesmoke;
   margin-bottom: 10px;
 }
-.jumbotron1TextBg{
+
+.jumbotron1TextBg {
   background-color: rgba(0, 0, 0, 0.75);
   position: relative;
   margin: auto;
@@ -34,65 +38,79 @@
   font-size: 500;
   text-align: center;
 }
-.jumbotron1Text{
+
+.jumbotron1Text {
   color: whitesmoke;
   text-align: center;
   padding: 5px;
   margin-top: 10px;
 }
-.whiteText{
-  color:whitesmoke;
+
+.whiteText {
+  color: whitesmoke;
 }
-.blackText{
+
+.blackText {
   color: black;
 }
-.bg-foot{
+
+.bg-foot {
   background-color: #2C354E;
   color: #2C354E;
 }
-.tecaheader{
-  padding-top:20px;
-  padding-bottom:15px;
+
+.tecaheader {
+  padding-top: 20px;
+  padding-bottom: 15px;
   color: #003F91;
 }
-.tecastory{
+
+.tecastory {
   color: #191516;
- font-size: x-large;
+  font-size: x-large;
   text-align: center;
   padding-top: auto;
 }
-.tecaname{
+
+.tecaname {
   color: 011627;
 }
-.btnStyle{
+
+.btnStyle {
   width: 100%;
-  height: 4rem; 
+  height: 4rem;
   background-color: #f8543e;
 }
-.btnStyle:hover{
+
+.btnStyle:hover {
   background-color: #da3520;
 }
-#active{
+
+#active {
   background-color: #c2301d;
   color: white;
 }
-.btnMargin{
+
+.btnMargin {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
 .ubuntu-sans-btn {
   font-family: "Ubuntu Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  font-variation-settings:"wdth" 100;
+  font-variation-settings: "wdth" 100;
   font-size: large;
 }
-.navbarRight{
+
+.navbarRight {
   position: absolute;
   right: 20px;
 }
-.jumbotron2{
+
+.jumbotron2 {
   background-image: url(photos/Dish1.avif);
   background-size: cover;
   background-position: center;
@@ -104,31 +122,38 @@
   border-radius: 20px;
   box-shadow: 2px 2px 5px #888888;
 }
-.unbold{
+
+.unbold {
   font-style: normal;
 }
-.Dish1-text{
+
+.Dish1-text {
   padding-top: 10px;
 }
-.btnMargin{
+
+.btnMargin {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-.iconHeight{
+
+.iconHeight {
   width: 50px;
   height: auto;
   padding: auto;
   right: 15px;
   padding-right: 5px;
 }
-#count{
+
+#count {
   background-color: #ff6d00;
 }
-.anchor{
+
+.anchor {
   position: relative;
   padding-top: 10px;
 }
-.shopBtn{
+
+.shopBtn {
   position: absolute;
   right: 10px;
   margin: auto;
@@ -137,61 +162,90 @@
   width: 60px;
   height: 47.5px;
 }
-.shopBtn:hover{
+
+.shopBtn:hover {
   background-color: #A1E326;
 }
-.shopBtn:active{
+
+.shopBtn:active {
   background-color: #7eb519;
 }
-.popOverStyle{
+
+.popOverStyle {
   background-color: rgb(255, 255, 255);
   border: #191516 2px;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 10px;
 }
-.teca-body{
+
+.teca-body {
   background-color: #61D181;
 }
-.teca-text{
+
+.teca-text {
   color: #EDFCFD;
 }
-.teca-nav{
+
+.teca-nav {
   background-color: #00B88A;
 }
-.menuBtnStyleone{
+
+.menuBtnStyleone {
   margin: 5px;
   background-color: #22b40c;
   color: whitesmoke;
 }
-.menuBtnStyletwo{
+
+.menuBtnStyletwo {
   margin: 5px;
   background-color: #d10000;
   color: whitesmoke;
 }
-.changeCard{
- margin-top: 10px;
- margin-bottom: 20px;
- box-shadow: 2px 2px 5px #888888;
- border-radius: 20px;
+
+.changeCard {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 5px #888888;
+  border-radius: 20px;
 }
-#tipActive{
+
+#tipActive {
   background-color: red;
   color: white;
 }
-.tipbtnStyle{
-  background-color: rgb(179, 103, 103);
+
+.tipbtnStyle {
+  background-color: rgb(255, 67, 67);
   color: black;
 }
-.cardStyle{
- margin: 5px;
+
+.tipbtnStyle:hover{
+  background-color: rgb(150, 16, 16);
+  color: white;
 }
-.homeCardText{
+
+.cardStyle {
+  margin: 5px;
+}
+
+.homeCardText {
   font-size: larger;
 }
-.chipCard{
+
+.chipCard {
   margin-right: 20px;
 }
-.shopSpacing{
-  position:absolute;
+
+.shopSpacing {
+  position: absolute;
   right: 20px;
   left: auto;
   bottom: 0px;
+}
+
+.menuImgStyl {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
 }

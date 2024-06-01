@@ -135,7 +135,7 @@ function removeElements() {
 function createCard(menuStuff, section) {
     // Creates div that defines the size of each card
     let sizingDiv = document.createElement("div");
-    sizingDiv.classList.add("col-sm-6", "mb-3", "mb-sm-0");
+    sizingDiv.classList.add("col-sm-6", "mb-3", "mb-sm-0", "cardHeight");
     sectionDiv.appendChild(sizingDiv);
     // Creates the div that defines the bootstrap card
     let newCard = document.createElement("div");
@@ -143,17 +143,17 @@ function createCard(menuStuff, section) {
     sizingDiv.appendChild(newCard);
     // row within card
     let cardRow = document.createElement("div");
-    cardRow.classList.add("row", "g-0");
+    cardRow.classList.add("row", "g-0", "d-flex", "align-items-center");
     newCard.append(cardRow);
     // image sizer
     let imgSizer = document.createElement("div");
-    imgSizer.classList.add("col-md-4");
+    imgSizer.classList.add("col-md-4","menuImgSizer", "flex-shrink-0");
     cardRow.append(imgSizer);
     // image
     let imageCard = document.createElement("img");
     imageCard.setAttribute("src", section.pic);
     imageCard.setAttribute("alt", "image of a menu item");
-    imageCard.classList.add("img-fluid", "rounded-start");
+    imageCard.classList.add("img-fluid", "rounded-start", "menuImgStyl");
     imgSizer.append(imageCard);
     // body sizer
     let contentSizer = document.createElement("div");
@@ -163,6 +163,10 @@ function createCard(menuStuff, section) {
     let newContent = document.createElement("div");
     newContent.classList.add("card-body", "newElement");
     contentSizer.appendChild(newContent);
+    // content aligner
+    let contentAligner = document.createElement("div");
+    contentAligner.classList.add("flex-grow-1", "ms-3")
+    newContent.append(contentAligner);
     // creates the title for the element
     let newTitle = document.createElement("h5");
     newTitle.classList.add("card-title", "newElement");
@@ -194,7 +198,7 @@ function createCard(menuStuff, section) {
     // adds buttons to the style div
     buttonStyle.append(newButton, removeButton);
     // adds the title, price, and buttons all at the same time
-    newContent.append(newTitle, newPrice, buttonStyle);
+    contentAligner.append(newTitle, newPrice, buttonStyle);
 };
 
 // called whenever a button to change the menu items is pressed.
