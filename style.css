@@ -254,3 +254,8 @@
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
+.imgmargin{
+  margin-top: auto;
+  margin-bottom: auto;
+}
