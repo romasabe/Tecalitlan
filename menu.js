@@ -81,6 +81,7 @@ function order(section) {
     ordered.push(section.menuItem);
     prices.push(section.price);
     priceCount();
+    alert(count(ordered))
 };
 
 // remove an item from the order if it has been ordered
