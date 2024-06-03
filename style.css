@@ -197,7 +197,31 @@
   color: whitesmoke;
 }
 
+.menuBtnStyleone:hover{
+  margin: 5px;
+  background-color: #1d8b0b;
+  color: whitesmoke;
+}
+
+.menuBtnStyleone:active{
+  margin: 5px;
+  background-color: #22b40c;
+  color: whitesmoke;
+}
+
 .menuBtnStyletwo {
+  margin: 5px;
+  background-color: #d10000;
+  color: whitesmoke;
+}
+
+.menuBtnStyletwo:hover{
+  margin: 5px;
+  background-color: #990101;
+  color: whitesmoke;
+}
+
+.menuBtnStyletwo:active{
   margin: 5px;
   background-color: #d10000;
   color: whitesmoke;
